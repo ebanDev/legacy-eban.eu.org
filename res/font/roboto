@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'RobotoBlack';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/893fe14628bd7ac498d550e96367e1be/RobotoBlack.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoBlackItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/256aab654d3c4dd0e12fd0a32c7e8aa6/RobotoBlackItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'RobotoBold';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/d329cc8b34667f114a95422aaad1b063/RobotoBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoBoldItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/b37d0bb73a2f688ecaee01647f41e3e5/RobotoBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'RobotoItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/de74c60991cd63c8b922e0e665a39c7a/RobotoItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'RobotoLight';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/7b5fb88f12bec8143f00e21bc3222124/RobotoLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoLightItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/129c5057f4480f9a353e15e1e1e09f9d/RobotoLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'RobotoMedium';
+        src: url('https://fontlibrary.org/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/fe13e4170719c2fc586501e777bde143/RobotoMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoMediumItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/5b25afa871e1b896011859f8cdf8da74/RobotoMediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'RobotoRegular';
+        src: url('https://fontlibrary.org/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/ac3f799d5bbaf5196fab15ab8de8431c/RobotoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoThin';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/3f68500b267c20051088bcc0698af773/RobotoThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'RobotoThinItalic';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/1e5737be5c68c15c3a105b2db9a3b67c/RobotoThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+ /* The following rules are deprecated. */ 
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/893fe14628bd7ac498d550e96367e1be/RobotoBlack.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/256aab654d3c4dd0e12fd0a32c7e8aa6/RobotoBlackItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/d329cc8b34667f114a95422aaad1b063/RobotoBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/b37d0bb73a2f688ecaee01647f41e3e5/RobotoBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/de74c60991cd63c8b922e0e665a39c7a/RobotoItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/7b5fb88f12bec8143f00e21bc3222124/RobotoLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/129c5057f4480f9a353e15e1e1e09f9d/RobotoLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/fe13e4170719c2fc586501e777bde143/RobotoMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/5b25afa871e1b896011859f8cdf8da74/RobotoMediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/ac3f799d5bbaf5196fab15ab8de8431c/RobotoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/3f68500b267c20051088bcc0698af773/RobotoThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('/assets/fonts/roboto/4f8c3c9bbdde908a86daabfe666d2f61/1e5737be5c68c15c3a105b2db9a3b67c/RobotoThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+

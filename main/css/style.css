@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'Montserrat';
+        src: url('https://res.eban.dev/font/montserrat.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratAlt';
+        src: url('https://res.eban.dev/font/montserratAlt.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+        src: url('https://res.eban.dev/font/poppins.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('https://res.eban.dev/font/roboto.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.dark{
+  background: #000;
+  position: fixed;
+  padding: 11px 12px 9px 12px;
+  border-radius: 100px;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.dark img:hover{
+  width: 33px;
+}
+
+.dark img{
+  width: 30px;
+  transition: 1s;
+}
+
+header img {
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  height: 6.8vw;
+  margin-top: 0.5vw;
+}
+
+header h1 {
+  font-family: 'MontserratAlt';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #64505A;
+  font-size: 4vw;
+}
+
+.card {
+  height: 25vw;
+  width: 18.5vw;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  transition: 0.3s;
+  margin-bottom: 0;
+}
+
+.card:hover{
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-top: 5vw;
+}
+
+.card .main-icon {
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  height: 5vw;
+  margin-top: 1vw;
+  width: 100%;
+  margin-bottom: 2vw;
+}
+
+.card h3 {
+  color: #3988FF;
+  letter-spacing: 0.1em;
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-size: 2vw;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+}
+
+.card p {
+  margin-left: 50%;
+  color: #454545;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.2vw;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.card a {
+  color: #454545;
+  font-size: 1.5vw;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 3.4vw;
+  margin-left: 1vw;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #3988FF;
+}
+
+
+.card .button {
+  background: linear-gradient(133.27deg, #7AAFFF 14.02%, #004ABA 112.83%);
+  border-radius: 100px;
+  width: 45%;
+  height: 10%;
+  border: none;
+  margin-top: 10%;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 1.3vw;
+  transition: 0.3s;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.card .button:hover {
+  width: 46%;
+  height: 10.5%;
+  color: #fff;
+}
+
+.card .button:active {
+  width: 42%;
+  height: 10%;
+}
+
+.wrap {
+  width: 90%;
+  position: relative;
+}
+
+.card img {
+  height: 2.5vw;
+  opacity: 70%;
+  float: left;
+  margin-top: 0.5vw;
+  transition: 0.3s;
+}
+
+.icons {
+  margin-left: 12%;
+}
+
+#root-me {
+  height: 3.2vw;
+  margin-left: -0.4vw;
+}
+
+#root-me-a {
+  line-height: 4.4vw;
+  margin-left: 0.7vw;
+}
+
+#contact {
+  margin-bottom: 1vw;
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    height: 80vw;
+    width: 60vw;
+    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin-bottom: 30%;
+    margin-left: 50vw;
+    transform: translate(-50%, 0%);
+  }
+
+  .cards {
+    display: block;
+    margin-left: 0vw;
+    margin-top: 5vw;
+  }
+
+  .card .main-icon {
+    height: 12vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+
+  .card h3 {
+    font-size: 6vw;
+  }
+
+  .card p {
+    font-size: 3.5vw;
+    width: 80%;
+    margin-top: 15%;
+  }
+
+  .card img {
+    height: 6.5vw;
+    margin-top: 3vw;
+  }
+
+  #root-me {
+    height: 8vw;
+  }
+
+  .card a {
+    line-height: 12vw;
+    font-size: 4vw;
+    margin-left: 5vw;
+  }
+
+  .card .button {
+    font-size: 3.5vw;
+  }
+
+  #root-me-a {
+    line-height: 14vw;
+    margin-left: 4vw;
+  }
+
+  header img {
+    height: 18vw;
+    margin-top: 5vw;
+  }
+
+  header h1 {
+    font-size: 12vw;
+    margin-bottom: 15vw;
+  }
+
+  #darkMode{
+    width: 25px;
+    height: 25px;
+  }
+  .dark{
+    padding: 9px 9px 7px 10px;
+  }
+}

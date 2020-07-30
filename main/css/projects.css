@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'MontserratRegular';
+        src: url('https://res.eban.dev/font/montserrat.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratAlt';
+        src: url('https://res.eban.dev/font/montserratAlt.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsRegular';
+        src: url('https://res.eban.dev/font/poppins.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+        src: url('https://res.eban.dev/font/roboto.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.dark {
+  background: #000;
+  position: fixed;
+  padding: 11px 12px 9px 12px;
+  border-radius: 100px;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.dark img:hover {
+  width: 33px;
+}
+
+.dark img {
+  width: 30px;
+  transition: 1s;
+}
+
+header img {
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  height: 7.2vw;
+  margin-top: 0.5vw;
+}
+
+header h1 {
+  font-family: 'MontserratAlt';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #64505A;
+  font-size: 4vw;
+}
+
+.card {
+  width: 40vw;
+  padding-bottom: 10vw;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 3%;
+  margin-bottom: 20vw;
+}
+
+.card .button {
+  background: #454545;
+  border-radius: 100px;
+  width: 15%;
+  height: 10%;
+  border: none;
+  margin-top: 10%;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 1.3vw;
+  transition: 0.3s;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 2%;
+}
+
+.card .button:hover {
+  width: 16%;
+  height: 10.5%;
+  color: #fff;
+}
+
+.card .button:active {
+  width: 42%;
+  height: 10%;
+}
+.card img {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  transition: 1s;
+  display: block;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.back {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  background: linear-gradient(133.27deg, #7AAFFF 14.02%, #004ABA 112.83%);
+  border-radius: 10px;
+  padding-bottom: 4vw;
+  transition: 0.3s;
+}
+
+.back2 {
+  padding-top: 2vw;
+  padding-bottom: 3vw;
+}
+
+.back3 {
+  padding-top: 0.5vw;
+  padding-bottom: 3vw;
+}
+
+.back4 {
+  padding: 1vw;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.back:active {
+  opacity: 1;
+}
+
+.card h1 {
+  color: #fff;
+  font-family: 'PoppinsRegular';
+  text-align: center;
+  font-size: 2.5vw;
+  padding-top: 2vw;
+}
+
+.card p {
+  color: #fff;
+  font-family: 'RobotoRegular';
+  text-align: center;
+  font-size: 1.3vw;
+  padding-top: 2vw;
+  width: 80%;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 70vw;
+    margin-bottom: 50vw;
+  }
+
+  .padding {
+    margin-top: 100vw;
+  }
+
+  .card h1 {
+    font-size: 5vw;
+  }
+
+  .card p {
+    font-size: 2.5vw;
+  }
+
+  .card .button {
+    width: 17vw;
+    height: 5vw;
+    font-size: 2vw;
+  }
+
+  .back {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  header h1 {
+    font-size: 12vw;
+    margin-bottom: 15vw;
+  }
+
+  header img {
+    height: 18vw;
+    margin-top: 5vw;
+  }
+
+  #darkMode {
+    width: 25px;
+    height: 25px;
+  }
+
+  .dark {
+    padding: 9px 9px 7px 10px;
+  }
+
+  .back2 {
+    padding-bottom: 5.5vw;
+  }
+
+  .back3 {
+    padding-bottom: 5.5vw;
+  }
+}

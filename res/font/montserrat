@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'MontserratBlack';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/561246a3549d3b797b4b611652a79d7c/MontserratBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratBlackItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3da12a02bb360cd21abc432517b546d2/MontserratBlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratBold';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/9c71d42b6a840ecfda8fc555040a1c76/MontserratBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratBoldItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/81f56370a912bac75d5ad4bd3c52ac55/MontserratBoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratExtraBold';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/433ac418a603294fc5891dde6a73cd24/MontserratExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratExtraBoldItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/965b7ea0f52031a9d292e6fe55ab9060/MontserratExtraBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratExtraLight';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/2ec7cecb19c1b42ca9ca709971016156/MontserratExtraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratExtraLightItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3b26932636b21dcbc04dc2263af696f8/MontserratExtraLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3fcbdb4c29e43e3a56918081e68319e1/MontserratItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratLight';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/d4a8834fa8f57f0929b9f4ef89584361/MontserratLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratLightItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/fad9ab039c3de5ab6b85f6fc87c85481/MontserratLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratMedium';
+        src: url('https://fontlibrary.org//assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/d815b0a29adf3450c55f56e2fb813be4/MontserratMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratMediumItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/f15ca5fe6efcb2893541ee7ad896c275/MontserratMediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratRegular';
+        src: url('https://fontlibrary.org/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/92db9a0772b3732e6d686fec3711af42/MontserratRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratSemiBold';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/bb3740d350b0186ce32b5678972bf061/MontserratSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratSemiBoldItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/eee96022889810e6ff89d39829e29187/MontserratSemiBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'MontserratThin';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/cb2144b361907d6549a80a5203f07347/MontserratThin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'MontserratThinItalic';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/4e85bb77e2e7805a17a9b5aa06a5420e/MontserratThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+ /* The following rules are deprecated. */ 
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/561246a3549d3b797b4b611652a79d7c/MontserratBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3da12a02bb360cd21abc432517b546d2/MontserratBlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/9c71d42b6a840ecfda8fc555040a1c76/MontserratBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/81f56370a912bac75d5ad4bd3c52ac55/MontserratBoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/433ac418a603294fc5891dde6a73cd24/MontserratExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/965b7ea0f52031a9d292e6fe55ab9060/MontserratExtraBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/2ec7cecb19c1b42ca9ca709971016156/MontserratExtraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3b26932636b21dcbc04dc2263af696f8/MontserratExtraLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/3fcbdb4c29e43e3a56918081e68319e1/MontserratItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/d4a8834fa8f57f0929b9f4ef89584361/MontserratLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/fad9ab039c3de5ab6b85f6fc87c85481/MontserratLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/d815b0a29adf3450c55f56e2fb813be4/MontserratMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/f15ca5fe6efcb2893541ee7ad896c275/MontserratMediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/92db9a0772b3732e6d686fec3711af42/MontserratRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/bb3740d350b0186ce32b5678972bf061/MontserratSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/eee96022889810e6ff89d39829e29187/MontserratSemiBoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/cb2144b361907d6549a80a5203f07347/MontserratThin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+        src: url('/assets/fonts/montserrat/619e8bf55eda408c0efd69be83eb8cbf/4e85bb77e2e7805a17a9b5aa06a5420e/MontserratThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
