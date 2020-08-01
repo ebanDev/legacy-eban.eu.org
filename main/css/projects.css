@@ -176,6 +176,34 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  body{
+    background: #111;
+  }
+
+  .card {
+    background: #000;
+  }
+
+  .center p, .twocards p, .card a {
+    color: #f0f0f0;
+  }
+
+  header h1{
+    color: #fff;
+  }
+
+  img:not(header img, .projects_body .card img){
+    filter: invert(100%);
+  }
+
+  #root-me{
+    filter: invert(100%);
+  }
+
+}
+
 @media only screen and (max-width: 1000px) {
   .card {
     width: 70vw;

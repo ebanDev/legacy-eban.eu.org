@@ -205,6 +205,34 @@ header h1 {
   margin-bottom: 1vw;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  body{
+    background: #111;
+  }
+
+  .card {
+    background: #000;
+  }
+
+  .center p, .twocards p, .card a {
+    color: #f0f0f0;
+  }
+
+  header h1{
+    color: #fff;
+  }
+
+  img:not(header img, .projects_body .card img){
+    filter: invert(100%);
+  }
+
+  #root-me{
+    filter: invert(100%);
+  }
+
+}
+
 @media only screen and (max-width: 800px) {
   .card {
     height: 80vw;
