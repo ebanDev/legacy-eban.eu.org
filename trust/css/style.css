@@ -451,6 +451,46 @@ header h1{
   user-select: none;
 }
 
+/* DARK MODE:   */
+
+
+@media (prefers-color-scheme: dark) {
+
+  body{
+    background: #111;
+  }
+
+  .card, .app-card {
+    background: #000 !important;
+  }
+
+  .center p, .twocards p, .card a {
+    color: #f0f0f0;
+  }
+
+  header h1{
+    color: #fff;
+  }
+
+  p, .report h4, h2, .report h3{
+    color: #f1f1f1;
+  }
+
+  header, .report, .popup, .specs div:not(.card-wrap), .input, .app-card{
+    background-color: #000;
+  }
+
+  header h1 a, .specs h5, .app-card h5, .app-card .percent, h4, #input{
+    color: #fff !important;
+  }
+
+  .input img{
+    filter: invert(100%);
+  }
+
+}
+
+
 /* RESPONSIVE:  */
 
 @media only screen and (max-width: 800px) {
