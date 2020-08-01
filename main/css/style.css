@@ -223,12 +223,8 @@ header h1 {
     color: #fff;
   }
 
-  img:not(header img, .projects_body .card img){
-    filter: invert(100%);
-  }
-
-  #root-me{
-    filter: invert(100%);
+  #root-me, .wrap img, .main-icon{
+    filter: invert(100%) !important;
   }
 
 }
