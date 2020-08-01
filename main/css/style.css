@@ -38,7 +38,7 @@ html{
 .dark{
   background: #000;
   position: fixed;
-  padding: 11px 12px 9px 12px;
+  padding: 11px;
   border-radius: 100px;
   bottom: 30px;
   right: 30px;
@@ -54,6 +54,10 @@ html{
 .dark img{
   width: 30px;
   transition: 1s;
+}
+
+.sun{
+  display: none;
 }
 
 header img {
