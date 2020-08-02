@@ -14,3 +14,19 @@ if (language == "fr") {
 } else {
   tran.setLang('default');
 }
+
+$(".moon").click() {
+  $("body").removeClass("night")
+}
+
+$(".sun").click() {
+  $("body").addClass("night")
+}
+
+$(".fr").click() {
+  tran.setLang('fr');
+}
+
+$(".en").click() {
+  tran.setLang('en');
+}
