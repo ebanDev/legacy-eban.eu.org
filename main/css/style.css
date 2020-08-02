@@ -213,6 +213,10 @@ header h1 {
   display: none;
 }
 
+.flag{
+  margin: 15px 0px;
+}
+
 @media (prefers-color-scheme: dark) {
 
   body{
