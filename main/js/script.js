@@ -16,11 +16,11 @@ if (language == "fr") {
 }
 
 $(".moon").click() {
-  $("body").removeClass("night")
+  $("body").removeClass("night");
 }
 
 $(".sun").click() {
-  $("body").addClass("night")
+  $("body").addClass("night");
 }
 
 $(".fr").click() {
