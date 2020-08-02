@@ -15,18 +15,18 @@ if (language == "fr") {
   tran.setLang('default');
 }
 
-$(".moon").click() {
+$(".moon").click(function() {
   $("body").removeClass("night");
-}
+});
 
-$(".sun").click() {
+$(".sun").click(function() {
   $("body").addClass("night");
-}
+});
 
-$(".fr").click() {
+$(".fr").click(function() {
   tran.setLang('fr');
-}
+});
 
-$(".en").click() {
+$(".en").click(function() {
   tran.setLang('en');
-}
+});
