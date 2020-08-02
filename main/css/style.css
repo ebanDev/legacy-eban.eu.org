@@ -209,6 +209,10 @@ header h1 {
   margin-bottom: 1vw;
 }
 
+.settings div:not(.settings_icon){
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
 
   body{
@@ -231,6 +235,13 @@ header h1 {
     filter: invert(100%) !important;
   }
 
+  .sun{
+    display: inherit;
+  }
+
+  .moon{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
