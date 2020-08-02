@@ -9,8 +9,8 @@ if (language == "fr") {
   $(".back").css("padding-bottom", "2.5vw");
   $(".back3").css("padding-bottom", "3vw");
   $(".back2").css("padding-top", "1vw");
-  $(".cards .button").css("width", "55%");
-  $(".cards .button").css("height", "11%");
+  $(".card .button").css("width", "55%");
+  $(".card   .button").css("height", "11%");
 } else {
   tran.setLang('default');
 }
@@ -29,4 +29,9 @@ $(".fr").click(function() {
 
 $(".en").click(function() {
   tran.setLang('default');
+});
+
+$(".settings_icon").click(function() {
+  $(".settings_icon").hide();
+  $(".hidden").show();
 });
