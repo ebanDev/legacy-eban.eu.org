@@ -209,12 +209,20 @@ header h1 {
   margin-bottom: 1vw;
 }
 
-.settings div:not(.settings_icon){
+.hidden{
   display: none;
 }
 
 .flag{
   margin: 15px 0px;
+}
+
+#settings_icon:target{
+  display: none;
+}
+
+#settings_icon:target + .hidden{
+  display: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
