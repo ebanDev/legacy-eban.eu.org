@@ -217,6 +217,14 @@ header h1 {
   margin: 15px 0px;
 }
 
+#settings_icon:target{
+  display: none;
+}
+
+#settings_icon:target + .hidden{
+  display: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
 
   body{

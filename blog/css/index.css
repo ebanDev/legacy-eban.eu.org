@@ -27,16 +27,17 @@ body{
 
 .header h1{
   text-align: center;
-  margin-top: 1%;
+  padding-top: 6%;
   font-size: 3vw;
 }
 
 .header .nav{
   display: flex;
   justify-content: space-around;
-  width: 19%;
-  margin-left: 78%;
+  width: 350px;
   margin-top: 2%;
+  float: right;
+  margin-right: 30px;
 }
 
 .header .nav a{
@@ -65,7 +66,16 @@ body{
 }
 
 .article{
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  padding-top: 4vh;
+  display: inline-block;
+  border-top: 1px solid #333;
+}
+
+.first_article{
+  margin-top: -5vh;
+  border-top: none;
 }
 
 .article .button{
@@ -77,6 +87,7 @@ body{
   border-radius: 100px;
   cursor: pointer;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .article .button:hover{
@@ -162,5 +173,6 @@ li{
     margin-left: 0%;
     width: 100%;
     margin-top: 20px;
+    float: none;
   }
 }
