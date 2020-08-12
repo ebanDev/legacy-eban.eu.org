@@ -1,9 +1,10 @@
-<div class="header">
-  <div class="nav"><a href="https://eban.dev/blog/">ACCUEIL</a><a href="https://eban.dev/blog/contact.html">CONTACT</a><a href="https://eban.dev/blog/about.html">A PROPOS</a></div>
-  <h1>Eban's Blog</h1>
-</div>
-<div class="article-list">
-
+---
+title: AdGuard Home : La sécurité et la vie privée dans votre maison 🛡️
+keywords: [AdGuard, privacy, adblock, network wide adblock, eban]
+description: Dans ce nouvel article, nous allons traiter du logiciel open-source AdGuard Home qui est un bloqueur de publicités et de trackers qui intègre des fonctions supplémentaires telles que le DOH qui permet de chiffrer les requêtes DNS de votre réseau Wi-Fi !
+url: https://blog.eban.dev/tutos/adguard-home-la-securite-et-la-vie-privee-dans-votre-maison
+image: https://teqqy.de/wp-content/uploads/2019/01/adguard-home-dashboard-1180x590.jpg
+...
 
 # AdGuard Home : La sécurité et la vie privée dans votre maison 🛡️
 

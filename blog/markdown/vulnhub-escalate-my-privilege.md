@@ -1,9 +1,9 @@
-<div class="header">
-  <div class="nav"><a href="https://eban.dev/blog/">ACCUEIL</a><a href="https://eban.dev/blog/contact.html">CONTACT</a><a href="https://eban.dev/blog/about.html">A PROPOS</a></div>
-  <h1>Eban's Blog</h1>
-</div>
-<div class="article-list">
-
+---
+title: Vulnhub : Escalate my Privilege 📝
+keywords: [Vulnhub, write-up, in, plain, sight, eban, hacking]
+description: Pour ce premier write-up, on commence par une machine (très) simple, Escalate My Privilege qui est une box créée par Akanksha Sachin Verma. Pour trouver l’IP de notre box, on lance la commande suivante sur notre kali netdiscover Cette commande liste tous les appareils connectés à notre réseau local. On voit ici que nous avons notre box en 192.168.1.23...
+url: https://blog.eban.dev/write-up/vulnhub-escalate-my-privilege
+...
 
 # Vulnhub : Escalate my Privilege 📝
 

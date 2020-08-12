@@ -1,13 +1,14 @@
-<div class="header">
-  <div class="nav"><a href="https://eban.dev/blog/">ACCUEIL</a><a href="https://eban.dev/blog/contact.html">CONTACT</a><a href="https://eban.dev/blog/about.html">A PROPOS</a></div>
-  <h1>Eban's Blog</h1>
-</div>
-<div class="article-list">
-
+---
+title: Vos mots de passe sont ils vraiment sécurisés 🔐
+keywords: [password, secure, mot de passe, securité, securisé, mdp, eban]
+description: Aujourd'hui, nous utilisons des mots de passe partout, pour déverrouiller son téléphone, son ordinateur, son compte en banque et bien d'autres. Il parait donc indispensable d'avoir des mots de passe forts pour sécuriser ces comptes. Dans cet article nous allons donc nous pencher sur comment sécuriser ces précieux sésames.
+url: https://blog.eban.dev/tutos/vos-mots-de-passe-sont-ils-vraiment-securises
+image: https://images.unsplash.com/photo-1592439024283-43a91c26a445?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+...
 
 # Vos mots de passe sont ils vraiment sécurisés 🔐
 
-Aujourd'hui, nous utilisons des mots de passe partout, pour déverrouiller son téléphone, son ordinateur, son compte en banque et bien d'autres. Il parait donc indispensable d'avoir des mots de passe **forts** pour sécuriser ces comptes. Dans cet article nous allons donc sur pencher sur comment sécuriser ces précieux sésames
+Aujourd'hui, nous utilisons des mots de passe partout, pour déverrouiller son téléphone, son ordinateur, son compte en banque et bien d'autres. Il parait donc indispensable d'avoir des mots de passe **forts** pour sécuriser ces comptes. Dans cet article nous allons donc nous pencher sur comment sécuriser ces précieux sésames.
 
 ### 1) Avoir des mots de passe différents
 

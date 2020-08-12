@@ -1,13 +1,15 @@
-<div class="header">
-  <div class="nav"><a href="https://eban.dev/blog/">ACCUEIL</a><a href="https://eban.dev/blog/contact.html">CONTACT</a><a href="https://eban.dev/blog/about.html">A PROPOS</a></div>
-  <h1>Eban's Blog</h1>
-</div>
-<div class="article-list">
-
+---
+title: Debuter dans l'infosec 👨‍💻
+keywords: [Debuter, infosec, hacking, pentesting, commencer, comment, eban]
+description: Dans ce nouvel article, nous allons traiter de la fameuse question ''La sécurité informatique, ca m'intéresse, mais par où commencer ?'' Par où commencer, la question est vaste mais voici un petit résumé des prérequis nécessaires pour commencer dans l'Infosec.
+url: https://blog.eban.dev/misc/debuter-dans-l-infosec
+image: https://images.unsplash.com/photo-1541728472741-03e45a58cf88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+...
 
 # Debuter dans l'infosec 👨‍💻
 
 Dans ce nouvel article, nous allons traiter de la fameuse question
+
 > La sécurité informatique, ca m'intéresse, mais par où commencer ?
 
 Par où commencer, la question est vaste mais voici un petit résumé des prérequis nécessaires pour commencer dans l'Infosec :
