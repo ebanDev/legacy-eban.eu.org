@@ -1,6 +1,6 @@
 ---
 title: WannaCry, le virus le plus dévastateur jamais créé 👾
-date: 14-02-2013
+date: 12-08-2020
 keywords: [wannacry, virus, malware, hacking, eban, ransomware]
 description: En mai 2017, un virus informatique du nom de WannaCry fait son apparition, il a infecté quelques 300 000 ordinateurs dans plus de 150 pays ! Trois ans plus tard, revenons ensemble sur le ransomware le plus dévastateur jamais créé.
 url: https://blog.eban.dev/misc/wannacry-le-virus-le-plus-devastateur-jamais-cree
@@ -32,10 +32,9 @@ En effet, il est impossible pour les pirates de relier une transaction à un ord
 
 ### Un Antidote ?
 
-Un groupe de trois experts en sécurité français ont créé logiciel nommé [Wanakiwi](https://github.com/gentilkiwi/wanakiwi).
-Cet outil permet de déchiffrer les fichiers.
-WannaCry utilise [**CryptoAPI**](https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface) (les fonctions cryptographiques de Windows) pour générer les clés de chiffrement ,  cependant ces fonctions inscrivent dans la RAM de l'ordinateur la clé privée en claire, WanaKiwi va
-donc aller chercher dans la RAM des traces de la clé privée utilisée pour chiffrer les données.
+Un groupe de trois experts en sécurité informatique français ont créé logiciel nommé [Wanakiwi](https://github.com/gentilkiwi/wanakiwi).
+Cet outil permet de déchiffrer les fichiers qui l'ont été par WannaCry.
+WannaCry utilise [**CryptoAPI**](https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface) (les fonctions cryptographiques de Windows) pour générer les clés de chiffrement, cependant ces fonctions inscrivent dans la RAM de l'ordinateur la clé privée en claire, WanaKiwi va donc aller chercher dans la RAM des traces de la clé privée utilisée pour chiffrer les données.
 
 ### Comment se prémunir de ce type d'attaques dans le futur ?
 
@@ -45,5 +44,9 @@ Cet outil permet de contrôler l'accès aux fichiers systèmes de Windows et aux
 
 Merci d'avoir lu cet article, j'espère qu'il vous aura plu.
 Je suis preneur de vos retours :)
+
+### Remerciements
+
+Merci à Shyla, xeway, 0xThxmxs, Shcanovishka, Sycorax, look, Ramle et Lancelot de m'avoir aidé pour la relecture
 
 Sources : https://fr.wikipedia.org/wiki/WannaCry, https://fr.wikipedia.org/wiki/The_Shadow_Brokers, https://docs.microsoft.com/fr-fr/security-updates/SecurityBulletins/2017/ms17-010, https://www.washingtonpost.com/world/national-security/us-set-to-declare-north-korea-carried-out-massive-wannacry-cyber-attack/2017/12/18/509deb1c-e446-11e7-a65d-1ac0fd7f097e_story.html, https://yewtu.be/watch?v=Mp3TH5PI6rc, https://www.secureworks.com/research/wcry-ransomware-analysis, https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface, https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access

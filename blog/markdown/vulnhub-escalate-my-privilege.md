@@ -80,5 +80,3 @@ Il ne nous reste plus qu’à faire
 > cat root/proof.txt
 
 Et voilà ! Nous avons le flag, cette box fut facile, je la recommanderais pour une première box…
-
-</div>

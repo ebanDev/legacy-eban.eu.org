@@ -32,7 +32,7 @@ Beaucoup de services acceptent les emojis comme mot de passe ! En voici une list
   - Protonmail ✅
   - Spotify ✅
 
-On peut aussi, pour sécuriser nos mot de passe utiliser des caractères d'autres alphabets que l'alphabet latin, du cyrillique, des lettres de l'alphabet arabe ou memes des charactères en Japonais, Coréen, en bref, tout les charactères Unicode
+On peut aussi, pour sécuriser nos mot de passe utiliser des caractères d'autres alphabets que l'alphabet latin, du cyrillique, des lettres de l'alphabet arabe ou memes des charactères en Japonais, Coréen, en bref tout les charactères de la table Unicode
 
 Pour simplifier cette démarche de création de mot de passe, j'ai fait un petit script Python sur mon Github disponible [ici](https://github.com/ebanDev/unicode-password-generator)
 
@@ -43,6 +43,5 @@ Il existe aussi des Clés USB A2F ! Plus sécurisés qu'une app sur mobile... En
 #### Remerciements
 
 Merci a Erispar pour la relecture
-Merci a 0x66 de m'avoir donné l'idée de parler des Clés USB A2F
 
-</div>
+Merci a 0x66 de m'avoir donné l'idée de parler des Clés USB A2F

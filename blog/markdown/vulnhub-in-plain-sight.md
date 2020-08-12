@@ -212,5 +212,3 @@ On cherche donc si on peut trouver quelque chose d'intéressant... Et dans le do
 Et voilà, cette box est terminée ! Merci d'avoir lu ce write-up en entier ! Si vous avez des retours, n'hésitez pas à me contacter sur twitter @eban_non.
 
 ![](https://i.postimg.cc/wMkQSf6f/Capture-d-cran-de-2020-04-23-16-43-21.png)
-
-</div>
