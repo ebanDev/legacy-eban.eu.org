@@ -1,5 +1,5 @@
 ---
-title: Vulnhub : In Plain Sight 📝
+title: Vulnhub, In Plain Sight 📝
 keywords: [Vulnhub, write-up, in, plain, sight, eban]
 description: Pour ce second write-up, nous allons faire In Plain Sight qui est une box créée par bzyo. Pour trouver l’IP de notre box, on lance la commande suivante netdiscover On voit ici que nous avons notre cible en 192.168.1.40, on lance donc un scan nmap sur l’IP de notre box, pour cela on lance la commande nmap -A 192.168.1.40 Nous avons donc, du SSH à jour...
 url: https://blog.eban.dev/write-up/vulnhub-in-plain-sight
