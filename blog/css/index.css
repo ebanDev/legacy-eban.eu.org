@@ -101,7 +101,7 @@ body{
 }
 
 section h3{
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
 
 section h2{
@@ -114,7 +114,7 @@ section img{
   width: 80%;
   margin-left: 10%;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px 10px rgba(0,0,0,0.9);
+  box-shadow: 2px 2px 5px 10px rgba(0,0,0,0.6);
 }
 
 section{
