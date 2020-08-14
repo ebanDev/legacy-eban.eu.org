@@ -6,7 +6,7 @@ description: En mai 2017, un virus informatique du nom de WannaCry fait son appa
 url: https://blog.eban.dev/misc/wannacry-le-virus-le-plus-devastateur-jamais-cree
 image: https://images.unsplash.com/flagged/photo-1560854350-13c0b47a3180?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1026&q=80
 ...
- 
+
 # WannaCry: le virus le plus dévastateur jamais créé 👾
 
 En mai 2017, un virus informatique du nom de WannaCry fait son apparition, il a infecté quelques 300 000 ordinateurs dans plus de 150 pays ! Trois ans plus tard, revenons ensemble sur le ransomware le plus dévastateur jamais créé.
@@ -49,4 +49,13 @@ Je suis preneur de vos retours :)
 
 Merci à Shyla, xeway, 0xThxmxs, Shcanovishka, Sycorax, look, Ramle et Lancelot de m'avoir aidé pour la relecture
 
-Sources : https://fr.wikipedia.org/wiki/WannaCry, https://fr.wikipedia.org/wiki/The_Shadow_Brokers, https://docs.microsoft.com/fr-fr/security-updates/SecurityBulletins/2017/ms17-010, https://www.washingtonpost.com/world/national-security/us-set-to-declare-north-korea-carried-out-massive-wannacry-cyber-attack/2017/12/18/509deb1c-e446-11e7-a65d-1ac0fd7f097e_story.html, https://yewtu.be/watch?v=Mp3TH5PI6rc, https://www.secureworks.com/research/wcry-ransomware-analysis, https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface, https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access
+Sources :
+
+- https://fr.wikipedia.org/wiki/WannaCry
+- https://fr.wikipedia.org/wiki/The_Shadow_Brokers
+- https://docs.microsoft.com/fr-fr/security-updates/SecurityBulletins/2017/ms17-010
+- https://www.washingtonpost.com/world/national-security/us-set-to-declare-north-korea-carried-out-massive-wannacry-cyber-attack/2017/12/18/509deb1c-e446-11e7-a65d-1ac0fd7f097e_story.html
+- https://yewtu.be/watch?v=Mp3TH5PI6rc
+- https://www.secureworks.com/research/wcry-ransomware-analysis
+- https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface
+- https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access
