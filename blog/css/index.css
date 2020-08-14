@@ -60,7 +60,7 @@ body{
   background: #000019;
   padding: 8% 10% 1% 10%;
   border-radius: 1vw;
-  box-shadow: 10px 10px 20px 1px rgba(0,0,0,0.58);
+  box-shadow: 7px 10px 20px 1px rgba(0,0,0,0.58);
   padding-bottom: -15vh;
   margin-bottom: 15vh;
 }
@@ -149,7 +149,7 @@ li{
 }
 
 section h1{
-  padding-top: 2vw;
+  padding-top: 3vw;
 }
 
 @media screen and (max-width: 640px) {
