@@ -58,4 +58,4 @@ Sources :
 - https://yewtu.be/watch?v=Mp3TH5PI6rc
 - https://www.secureworks.com/research/wcry-ransomware-analysis
 - https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface
-- https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access
+- https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access 
