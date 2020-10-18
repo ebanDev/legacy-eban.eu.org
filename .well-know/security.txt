@@ -1,0 +1,4 @@
+Contact: mailto:contact@eban.dev
+Contact: https://blog.eban.dev/contact
+Encryption: https://eban.dev/.well-know/pgp-key.txt
+Preferred-Languages: en, fr, eo
