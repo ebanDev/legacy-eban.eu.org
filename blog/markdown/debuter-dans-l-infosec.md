@@ -50,7 +50,7 @@ Voici une liste non exhaustive de ressources qui pourraient vous aider :
 - [http://exploit.education/](http://exploit.education/) (Un bon site pour débuter en pwn)
 - [https://cryptopals.com/](https://cryptopals.com/) (Un bon site pour débuter en crypto)
 - [https://discord.gg/heAw9mZ](https://discord.gg/heAw9mZ) (Rainbow | Serveur discord parlant d'infosec mais aussi programmation)
-- [https://discord.gg/YEy6aZ4](https://discord.gg/YEy6aZ4) (inf0sec | Serveur discord d'[@inf0sec1](https://twitter.com/inf0sec1) parlant de cybersécurité)
+- [https://discord.gg/YEy6aZ4](https://discord.gg/YEy6aZ4) (inf0sec | Serveur discord d'<a href="https://twitter.com/inf0sec1">@inf0sec1</a> parlant de cybersécurité)
 
 ##### Remerciements :
 Merci à SoEasY de m'avoir aidé pour la définition du RE
