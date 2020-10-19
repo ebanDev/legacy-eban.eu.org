@@ -152,6 +152,10 @@ section h1{
   padding-top: 3vw;
 }
 
+section a span{
+  color: #953cff;
+}
+
 @media screen and (max-width: 640px) {
   .header h1{
     font-size: 10vw;
