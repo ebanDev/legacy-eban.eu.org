@@ -34,6 +34,46 @@ body{
   background: #141429;
 }
 
+#pane{
+  display: none;
+  position: fixed;
+  background: #111;
+  height: 100%;
+  width: 20%;
+  border-radius: 25px 0px 0px 25px;
+  right: 0;
+  z-index: 10;
+  box-shadow: 10px 10px 5px 2000px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+#pane h4{
+  font-size: 25px;
+  font-family: Poppins;
+  padding: 10px;
+}
+
+#pane a{
+  font-size: 15px;
+  font-family: Roboto;
+  padding-left: 10px;
+}
+
+#pane .flag_container{
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 16%;
+  margin-left: 1%;
+}
+
+#pane .flag{
+  border-radius: 12px;
+  width: 55px;
+  cursor: pointer;
+}
+
 header .icon{
   width: 75px;
   margin: 30px;
@@ -44,6 +84,8 @@ header .menu_icon{
   width: 35px;
   margin: 50px;
   cursor: pointer;
+  z-index: 11;
+  position: relative;
 }
 
 header h1{
