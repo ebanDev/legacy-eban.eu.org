@@ -26,6 +26,10 @@
   color: #fff;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background: #141429;
 }
@@ -51,6 +55,8 @@ header h1{
 header p{
   font-family: Roboto;
   margin-top: 25px;
+  font-size: 17px;
+  font-weight: lighter;
 }
 
 header .red_line_1, header .red_line_2{
@@ -66,16 +72,100 @@ header .red_line_2{
 }
 
 header .desc_box{
-  width: 30%;
-  margin-left: 15%;
+  width: 20%;
+  margin-left: 18%;
   margin-top: 10%;
   height: 30%;
 }
 
 header .illus{
   float: right;
-  margin-top: -12.5%;
+  margin-top: -14.5%;
   width: 18%;
-  margin-right: 15%;
+  margin-right: 18%;
   opacity: 80%;
+}
+
+header .scroll{
+  width: 30px;
+  margin-left: calc(50% - 30px);
+  margin-top: 160px;
+}
+
+.scroll-downs {
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 130px;
+  width: 30px;
+  height: 72px;
+  cursor: pointer;
+}
+
+.mousey {
+  width: 3px;
+  padding: 7px 13px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+main{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 100px;
+}
+
+main .card{
+  width: 25vw;
+  background: #0B0A12;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+main .card h4{
+  font-size: 25px;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+main .card p{
+  font-size: 15px;
+  font-family: Roboto;
+  margin-top: 20px;
+}
+
+main .card .btn{
+  background: #252D52;
+  padding: 13px 19px;
+  border-radius: 25px;
+  font-family: Roboto;
+  text-decoration: none;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  display: block;
+  width: 25.5%;
+  margin-top: 25px;
 }
