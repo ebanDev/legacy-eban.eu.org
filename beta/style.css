@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Montserrat';
+        src: url('https://res.eban.dev/font/montserrat.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+        src: url('https://res.eban.dev/font/roboto.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+        src: url('https://res.eban.dev/font/poppins.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body{
+  background: #141429;
+}
+
+header .icon{
+  width: 75px;
+  margin: 30px;
+}
+
+header .menu_icon{
+  float: right;
+  width: 35px;
+  margin: 50px;
+  cursor: pointer;
+}
+
+header h1{
+  font-family: Montserrat;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+header p{
+  font-family: Roboto;
+  margin-top: 25px;
+}
+
+header .red_line_1, header .red_line_2{
+  width: 60px;
+  height: 3px;
+  background-color: #D83D3D;
+  border-radius: 100px;
+}
+
+header .red_line_2{
+  margin-top: 7px;
+  margin-left: 35px;
+}
+
+header .desc_box{
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 10%;
+  height: 30%;
+}
+
+header .illus{
+  float: right;
+  margin-top: -12.5%;
+  width: 18%;
+  margin-right: 15%;
+  opacity: 80%;
+}
