@@ -1,3 +1,4 @@
+var tran = new Translater();
 var is_opened = false;
 
 document.getElementById("menu_icon").onclick = function() {
@@ -25,3 +26,12 @@ document.getElementById("page").onclick = function() {
   document.getElementById("menu_icon").style.marginRight = '50px';
   is_opened = false;
 };
+
+
+
+if (tran.getLang() ==="eo") {
+  var all = document.getElementsByClassName('btn');
+  for (var i = 0; i < all.length; i++) {
+    all[i].style.width = '91px';
+  }
+}
