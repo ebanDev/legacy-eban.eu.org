@@ -46,6 +46,7 @@ body{
   box-shadow: 10px 10px 5px 2000px rgba(0,0,0,0.5);
   padding: 20px;
   transition: 1s;
+  opacity: 0;
 }
 
 #pane h4{
@@ -235,9 +236,6 @@ main .card .btn{
   main .card .btn{
     width: 87px;
   }
-  #pane{
-    width: 70%;
-  }
   #pane .flag_container{
     width: 58%;
   }
@@ -245,13 +243,4 @@ main .card .btn{
   #pane .flag{
     width: 50px;
   }
-}
-@keyframes openpane {
-  from {width: 0%;}
-  to {width: 20%;}
-}
-
-@keyframes closepane {
-  from {width: 0%;}
-  to {width: 20%;}
 }

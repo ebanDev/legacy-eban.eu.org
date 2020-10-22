@@ -7,27 +7,30 @@ menu_icon.onclick = function() {
   console.log(is_opened);
 
   if (is_opened) {
-    pane.style.animation = "closepane 0.5s";
     pane.style.width = "0%";
     pane.style.display = 'none';
     menu_icon.style.marginRight = '50px';
     is_opened = false;
   } else {
     pane.style.display = 'block';
-    pane.style.animation = "openpane 0.5s";
-    pane.style.width = "20%";
-
     if (window.innerWidth < 800) {
       menu_icon.style.display = 'none';
+      setTimeout(function () {
+        pane.style.width = "70%";
+        pane.style.opacity = '1';
+      }, 30);
     } else {
       menu_icon.style.marginRight = '23%';
+      setTimeout(function () {
+        pane.style.width = "20%";
+        pane.style.opacity = '1';
+      }, 30);
     }
     is_opened = true;
   }
 };
 
 document.getElementById("page").onclick = function() {
-  pane.style.animation = "closepane 0.5s";
   pane.style.width = "0%";
   pane.style.display = 'none';
   menu_icon.style.display = 'block';
