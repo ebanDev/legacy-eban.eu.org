@@ -39,12 +39,13 @@ body{
   position: fixed;
   background: #111;
   height: 100%;
-  width: 20%;
+  width: 0%;
   border-radius: 25px 0px 0px 25px;
   right: 0;
   z-index: 10;
   box-shadow: 10px 10px 5px 2000px rgba(0,0,0,0.5);
   padding: 20px;
+  transition: 1s;
 }
 
 #pane h4{
@@ -244,4 +245,13 @@ main .card .btn{
   #pane .flag{
     width: 50px;
   }
+}
+@keyframes openpane {
+  from {width: 0%;}
+  to {width: 20%;}
+}
+
+@keyframes closepane {
+  from {width: 0%;}
+  to {width: 20%;}
 }

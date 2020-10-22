@@ -1,29 +1,37 @@
 var tran = new Translater();
 var is_opened = false;
+var pane = document.getElementById("pane");
+var menu_icon = document.getElementById("menu_icon")
 
-document.getElementById("menu_icon").onclick = function() {
+menu_icon.onclick = function() {
   console.log(is_opened);
 
   if (is_opened) {
-    document.getElementById("pane").style.display = 'none';
-    document.getElementById("menu_icon").style.marginRight = '50px';
+    pane.style.animation = "closepane 0.5s";
+    pane.style.width = "0%";
+    pane.style.display = 'none';
+    menu_icon.style.marginRight = '50px';
     is_opened = false;
   } else {
-    document.getElementById("pane").style.display = 'block';
+    pane.style.display = 'block';
+    pane.style.animation = "openpane 0.5s";
+    pane.style.width = "20%";
 
     if (window.innerWidth < 800) {
-      document.getElementById("menu_icon").style.display = 'none';
+      menu_icon.style.display = 'none';
     } else {
-      document.getElementById("menu_icon").style.marginRight = '23%';
+      menu_icon.style.marginRight = '23%';
     }
     is_opened = true;
   }
 };
 
 document.getElementById("page").onclick = function() {
-  document.getElementById("pane").style.display = 'none';
-  document.getElementById("menu_icon").style.display = 'block';
-  document.getElementById("menu_icon").style.marginRight = '50px';
+  pane.style.animation = "closepane 0.5s";
+  pane.style.width = "0%";
+  pane.style.display = 'none';
+  menu_icon.style.display = 'block';
+  menu_icon.style.marginRight = '50px';
   is_opened = false;
 };
 
@@ -31,6 +39,11 @@ if (tran.getLang() ==="eo") {
   var all = document.getElementsByClassName('btn');
   for (var i = 0; i < all.length; i++) {
     all[i].style.width = '91px';
+  }
+} else {
+  var all = document.getElementsByClassName('btn');
+  for (var i = 0; i < all.length; i++) {
+    all[i].style.width = '87px';
   }
 }
 
