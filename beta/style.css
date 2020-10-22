@@ -45,7 +45,7 @@ body{
   z-index: 10;
   box-shadow: 10px 10px 5px 2000px rgba(0,0,0,0.5);
   padding: 20px;
-  transition: 1s;
+  transition: 0.3s;
   opacity: 0;
 }
 
