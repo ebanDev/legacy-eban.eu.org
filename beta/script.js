@@ -27,8 +27,6 @@ document.getElementById("page").onclick = function() {
   is_opened = false;
 };
 
-
-
 if (tran.getLang() ==="eo") {
   var all = document.getElementsByClassName('btn');
   for (var i = 0; i < all.length; i++) {
@@ -47,3 +45,15 @@ document.getElementById("fr").onclick = function() {
 document.getElementById("eo").onclick = function() {
   tran.setLang('eo');
 };
+
+var userLang = navigator.language || navigator.userLanguage;
+
+if (userLang == "fr") {
+  tran.setLang('fr');
+} else if (userLang == "fr-FR") {
+  tran.setLang('fr');
+} else if (userLang == "fr-BE") {
+  tran.setLang('fr');
+} else if (userLang == "eo") {
+  tran.setLang('eo');
+}
