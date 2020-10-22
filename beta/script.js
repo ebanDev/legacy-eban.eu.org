@@ -35,3 +35,15 @@ if (tran.getLang() ==="eo") {
     all[i].style.width = '91px';
   }
 }
+
+document.getElementById("en").onclick = function() {
+  tran.setLang('default');
+};
+
+document.getElementById("fr").onclick = function() {
+  tran.setLang('fr');
+};
+
+document.getElementById("eo").onclick = function() {
+  tran.setLang('eo');
+};
