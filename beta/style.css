@@ -43,7 +43,7 @@ body{
   right: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 25px 0px 0px 25px;
 }
 
@@ -87,6 +87,7 @@ header .icon{
   cursor: pointer;
   z-index: 11;
   position: absolute;
+  transition: 0.5s;
 }
 
 header h1{

@@ -28,8 +28,9 @@ function openNav() {
     menu_icon.style.marginRight = "calc(20% + 50px)";
   }
   setTimeout(function () {
-    pane.style.boxShadow = "10px 10px 5px 1500px rgba(0,0,0,0.5)";
-  }, 300);
+    page.style.boxShadow = "inset 10px 10px 5px 1500px rgba(0,0,0,0.5)";
+    page.style.filter = "brightness(30%)";
+  }, 30);
   body.style.overflowY = "hidden";
   is_opened = true;
 }
@@ -37,8 +38,9 @@ function openNav() {
 function closeNav() {
   pane.style.width = "0";
   setTimeout(function () {
-    pane.style.boxShadow = "0px 0px 0px 0px rgba(0,0,0,0)";
-  }, 300);
+    page.style.boxShadow = "inset 0px 0px 0px 0px rgba(0,0,0,0)";
+    page.style.filter = "brightness(100%)";
+  }, 30);
   menu_icon.style.marginRight = "50px";
   body.style.overflowY = "auto";
   menu_icon.style.display = 'block';
