@@ -5,6 +5,8 @@ var menu_icon = document.getElementById("menu_icon")
 var page = document.getElementById("page")
 var body = document.getElementById("body")
 
+updateBtnSize();
+
 menu_icon.onclick = function() {
   if (is_opened) {
     closeNav();
@@ -47,33 +49,6 @@ function closeNav() {
   is_opened = false;
 }
 
-if (tran.getLang() === "eo") {
-  var all = document.getElementsByClassName('btn');
-  for (var i = 0; i < all.length; i++) {
-    all[i].style.width = '91px';
-  }
-} else {
-  var all = document.getElementsByClassName('btn');
-  for (var i = 0; i < all.length; i++) {
-    all[i].style.width = '87px';
-  }
-}
-
-document.getElementById("en").onclick = function() {
-  tran.setLang('default');
-  closeNav();
-};
-
-document.getElementById("fr").onclick = function() {
-  tran.setLang('fr');
-  closeNav();
-};
-
-document.getElementById("eo").onclick = function() {
-  tran.setLang('eo');
-  closeNav();
-};
-
 var userLang = navigator.language || navigator.userLanguage;
 
 if (userLang == "fr") {
@@ -85,3 +60,35 @@ if (userLang == "fr") {
 } else if (userLang == "eo") {
   tran.setLang('eo');
 }
+
+function updateBtnSize() {
+  if (tran.getLang() === "eo") {
+    var all = document.getElementsByClassName('btn');
+    for (var i = 0; i < all.length; i++) {
+      all[i].style.width = '91px';
+    }
+  } else {
+    var all = document.getElementsByClassName('btn');
+    for (var i = 0; i < all.length; i++) {
+      all[i].style.width = '87px';
+    }
+  }
+}
+
+document.getElementById("en").onclick = function() {
+  tran.setLang('default');
+  updateBtnSize();
+  closeNav();
+};
+
+document.getElementById("fr").onclick = function() {
+  tran.setLang('fr');
+  updateBtnSize();
+  closeNav();
+};
+
+document.getElementById("eo").onclick = function() {
+  tran.setLang('eo');
+  updateBtnSize();
+  closeNav();
+};
