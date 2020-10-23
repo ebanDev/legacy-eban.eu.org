@@ -70,7 +70,7 @@ function updateBtnSize() {
   } else {
     var all = document.getElementsByClassName('btn');
     for (var i = 0; i < all.length; i++) {
-      all[i].style.width = '87px';
+      all[i].style.width = '81px';
     }
   }
 }
