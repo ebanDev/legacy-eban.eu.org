@@ -7,8 +7,10 @@ menu_icon.onclick = function() {
   console.log(is_opened);
 
   if (is_opened) {
-    pane.style.width = "0%";
-    pane.style.display = 'none';
+    setTimeout(function () {
+      pane.style.width = "0%";
+      pane.style.opacity = '0';
+    }, 30);
     menu_icon.style.marginRight = '50px';
     is_opened = false;
   } else {
@@ -31,7 +33,10 @@ menu_icon.onclick = function() {
 };
 
 document.getElementById("page").onclick = function() {
-  pane.style.width = "0%";
+  setTimeout(function () {
+    pane.style.width = "0%";
+    pane.style.opacity = '0';
+  }, 3000);
   pane.style.display = 'none';
   menu_icon.style.display = 'block';
   menu_icon.style.marginRight = '50px';
