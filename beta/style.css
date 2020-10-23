@@ -20,6 +20,10 @@ body{
   background: #141429;
 }
 
+.pointer{
+  cursor: pointer !important;
+}
+
 #pane{
   height: 100%;
   width: 0;
@@ -35,15 +39,30 @@ body{
 
 #pane h4{
   font-size: 25px;
-  font-family: Poppins;
+  font-family: Montserrat;
   padding: 30px 0px 10px 30px;
 }
 
 #pane a{
-  font-size: 15px;
+  font-size: 16px;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  padding-left: 30px;
+  margin-left: 30px;
   white-space: nowrap;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+#pane a:hover{
+  color: #D83D3D;
+}
+
+#pane .status{
+  font-size: 25px;
+  font-family: Montserrat;
+}
+
+.subtitle{
+  margin-top: 15px;
 }
 
 #pane .flag_container{
