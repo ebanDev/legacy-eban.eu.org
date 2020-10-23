@@ -51,14 +51,16 @@ function closeNav() {
 
 var userLang = navigator.language || navigator.userLanguage;
 
-if (userLang == "fr") {
-  tran.setLang('fr');
-} else if (userLang == "fr-FR") {
-  tran.setLang('fr');
-} else if (userLang == "fr-BE") {
-  tran.setLang('fr');
-} else if (userLang == "eo") {
-  tran.setLang('eo');
+if (document.cookie == "") {
+  if (userLang == "fr") {
+    tran.setLang('fr');
+  } else if (userLang == "fr-FR") {
+    tran.setLang('fr');
+  } else if (userLang == "fr-BE") {
+    tran.setLang('fr');
+  } else if (userLang == "eo") {
+    tran.setLang('eo');
+  }
 }
 
 function updateBtnSize() {
