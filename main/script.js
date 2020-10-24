@@ -60,6 +60,9 @@ if (document.cookie == "") {
     tran.setLang('fr');
   } else if (userLang == "eo") {
     tran.setLang('eo');
+  } else {
+    updateBtnSize();
+    tran.setLang("default");
   }
 }
 
@@ -69,7 +72,7 @@ function updateBtnSize() {
     for (var i = 0; i < all.length; i++) {
       all[i].style.width = '91px';
     }
-  } else if (tran.getLang() === "en") {
+  } else if (tran.getLang() === "default") {
     var all = document.getElementsByClassName('btn');
     for (var i = 0; i < all.length; i++) {
       all[i].style.width = '86px';
