@@ -69,6 +69,11 @@ function updateBtnSize() {
     for (var i = 0; i < all.length; i++) {
       all[i].style.width = '91px';
     }
+  } else if (tran.getLang() === "en") {
+    var all = document.getElementsByClassName('btn');
+    for (var i = 0; i < all.length; i++) {
+      all[i].style.width = '86px';
+    }
   } else {
     var all = document.getElementsByClassName('btn');
     for (var i = 0; i < all.length; i++) {
