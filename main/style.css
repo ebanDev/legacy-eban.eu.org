@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Montserrat';
-        src: url('https://res.eban.dev/font/montserrat.woff2');
+        src: url('https://res.eban.bzh/font/montserrat.woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,7 +26,7 @@ body{
 
 #pane{
   height: 100%;
-  width: 384px;
+  width: 0px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -70,7 +70,7 @@ body{
   bottom: 30px;
   display: flex;
   justify-content: space-around;
-  width: 18%;
+  width: 360px;
   margin-left: 1%;
 }
 
@@ -150,7 +150,7 @@ header .scroll{
   height: 72px;
   cursor: pointer;
   position: absolute;
-  bottom: 100px;
+  top: calc(100vh - 130px);
 }
 
 .mousey {
@@ -180,16 +180,20 @@ header .scroll{
   100% { transform: translateY(15px); opacity: 0;}
 }
 
-main{
+.projects{
   display: flex;
   justify-content: space-between;
   max-width: 100vw;
   width: 60%;
   margin-left: 20%;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
-main .card{
+.projects .card_line{
+  width: 50%;
+}
+
+.projects .card{
   width: 25vw;
   background: #0B0A12;
   border-radius: 10px;
@@ -197,19 +201,19 @@ main .card{
   margin-bottom: 50px;
 }
 
-main .card h4{
+.projects .card h4{
   font-size: 25px;
   font-family: Montserrat;
   text-align: center;
 }
 
-main .card p{
+.projects .card p{
   font-size: 15px;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   margin-top: 20px;
 }
 
-main .card .btn{
+.projects .card .btn{
   background: #252D52;
   padding: 13px 19px;
   border-radius: 25px;
@@ -220,6 +224,44 @@ main .card .btn{
   display: block;
   width: 87px;
   margin-top: 25px;
+}
+
+.skills{
+  min-height: 100vh;
+}
+
+.skills .scroll-downs{
+  top: calc(200vh - 130px);
+}
+
+.skills h1{
+  font-family: Montserrat;
+  padding-top: 80px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.skills iframe{
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  border-radius: 15px;
+  width: 45vw;
+  height: 55vh;
+}
+
+.skills .red_line_1, .skills .red_line_2{
+  width: 60px;
+  height: 3px;
+  background-color: #D83D3D;
+  border-radius: 100px;
+  margin-left: 50.7%;
+  transform: translate(-50%);
+}
+
+.skills .red_line_2{
+  margin-left: 52%;
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -233,15 +275,15 @@ main .card .btn{
   .card_line{
     width: 100%;
   }
-  main .card{
+  .projects .card{
     width: 100%;
   }
-  main{
+  .projects{
     width: 65vw;
     margin-left: 17.5%;
     display: block;
   }
-  main .card .btn{
+  .projects .card .btn{
     width: 87px;
   }
   #pane .flag_container{
