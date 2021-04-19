@@ -250,6 +250,7 @@ header .scroll{
   border-radius: 15px;
   width: 45vw;
   height: 55vh;
+  margin-bottom: 150px;
 }
 
 .skills .red_line_1, .skills .red_line_2{
