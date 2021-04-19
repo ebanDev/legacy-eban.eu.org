@@ -273,7 +273,7 @@ header .scroll{
     margin-left: 25% !important;
   }
   .card_line{
-    width: 100%;
+    width: 100% !important;
   }
   .projects .card{
     width: 100%;
@@ -292,5 +292,10 @@ header .scroll{
 
   #pane .flag{
     width: 50px;
+  }
+
+  .skills iframe{
+    width: 70vw;
+    height: 45vh;
   }
 }
