@@ -14,10 +14,12 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
   background: #141429;
+  overflow-x: hidden;
 }
 
 .pointer{
@@ -286,8 +288,9 @@ header .scroll{
   .projects .card .btn{
     width: 87px;
   }
+
   #pane .flag_container{
-    width: 69%;
+    width: 68%;
   }
 
   #pane .flag{
