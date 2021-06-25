@@ -250,7 +250,6 @@ header .scroll{
   transform: translate(-50%);
   border-radius: 15px;
   width: 45vw;
-  height: 55vh;
   margin-bottom: 150px;
 }
 
@@ -301,6 +300,5 @@ header .scroll{
 
   .skills .skills_image{
     width: 70vw;
-    height: 45vh;
   }
 }
