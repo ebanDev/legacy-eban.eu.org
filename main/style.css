@@ -1,4 +1,4 @@
-@font-face {
+Tu utilises quel nav ?@font-face {
     font-family: 'Montserrat';
         src: url('https://res.eban.bzh/font/montserrat.woff2');
     font-weight: normal;
@@ -226,6 +226,7 @@ header .scroll{
   display: block;
   width: 87px;
   margin-top: 25px;
+  font-size: 15.5px;
 }
 
 .skills{
