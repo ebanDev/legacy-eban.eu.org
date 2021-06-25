@@ -272,8 +272,8 @@ header .scroll{
     display: none;
   }
   .desc_box{
-    width: 50% !important;
-    margin-left: 25% !important;
+    width: 70% !important;
+    margin-left: 15% !important;
   }
   .card_line{
     width: 100% !important;
@@ -282,8 +282,8 @@ header .scroll{
     width: 100%;
   }
   .projects{
-    width: 65vw;
-    margin-left: 17.5%;
+    width: 70vw;
+    margin-left: 15%;
     display: block;
   }
   .projects .card .btn{
