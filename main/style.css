@@ -244,7 +244,7 @@ header .scroll{
   text-align: center;
 }
 
-.skills iframe{
+.skills .skills_image{
   margin-top: 50px;
   margin-left: 50%;
   transform: translate(-50%);
@@ -299,7 +299,7 @@ header .scroll{
     width: 50px;
   }
 
-  .skills iframe{
+  .skills .skills_image{
     width: 70vw;
     height: 45vh;
   }
