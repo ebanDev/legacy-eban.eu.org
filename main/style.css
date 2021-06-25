@@ -298,7 +298,7 @@ header .scroll{
     width: 50px;
   }
 
-  .skills .skills_image{
-    width: 70vw;
+  .skills{
+    display: none;
   }
 }
