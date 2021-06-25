@@ -1,4 +1,4 @@
-Tu utilises quel nav ?@font-face {
+@font-face {
     font-family: 'Montserrat';
         src: url('https://res.eban.bzh/font/montserrat.woff2');
     font-weight: normal;
@@ -195,6 +195,10 @@ header .scroll{
   width: 50%;
 }
 
+.gotoProjects{
+  display: none;
+}
+
 .projects .card{
   width: 25vw;
   background: #0B0A12;
@@ -300,5 +304,11 @@ header .scroll{
 
   .skills{
     display: none;
+  }
+  .gotoProjects{
+    display: inherit;
+  }
+  .gotoSkills{
+    display: block;
   }
 }
