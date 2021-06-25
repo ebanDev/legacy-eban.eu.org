@@ -309,6 +309,6 @@ header .scroll{
     display: inherit;
   }
   .gotoSkills{
-    display: block;
+    display: none;
   }
 }
