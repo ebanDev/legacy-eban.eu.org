@@ -6,8 +6,6 @@ var page = document.getElementById("page")
 var body = document.getElementById("body")
 var mouse = document.getElementsByClassName("scroll-downs")[0]
 
-updateBtnSize();
-
 menu_icon.onclick = function() {
   if (is_opened) {
     closeNav();
@@ -69,39 +67,17 @@ if (document.cookie == "") {
   }
 }
 
-function updateBtnSize() {
-  if (tran.getLang() === "eo") {
-    var all = document.getElementsByClassName('btn');
-    for (var i = 0; i < all.length; i++) {
-      all[i].style.width = '91px';
-    }
-  } else if (tran.getLang() === "default") {
-    var all = document.getElementsByClassName('btn');
-    for (var i = 0; i < all.length; i++) {
-      all[i].style.width = '86px';
-    }
-  } else {
-    var all = document.getElementsByClassName('btn');
-    for (var i = 0; i < all.length; i++) {
-      all[i].style.width = '81px';
-    }
-  }
-}
-
 document.getElementById("en").onclick = function() {
   tran.setLang('default');
-  updateBtnSize();
   closeNav();
 };
 
 document.getElementById("fr").onclick = function() {
   tran.setLang('fr');
-  updateBtnSize();
   closeNav();
 };
 
 document.getElementById("eo").onclick = function() {
   tran.setLang('eo');
-  updateBtnSize();
   closeNav();
 };

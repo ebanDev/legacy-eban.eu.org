@@ -228,7 +228,7 @@ header .scroll{
   margin-left: 50%;
   transform: translate(-50%, 0%);
   display: block;
-  width: 87px;
+  width: max-content;
   margin-top: 25px;
   font-size: 15.5px;
 }
@@ -291,7 +291,7 @@ header .scroll{
     display: block;
   }
   .projects .card .btn{
-    width: 87px;
+    width: max-content;
   }
 
   #pane .flag_container{
