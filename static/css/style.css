@@ -26,6 +26,17 @@
   --card-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #f5f5f5;
+    --main-text-color: #111111;
+    --title-text-color: #1c093b;
+    --cta-text-color: #e48080;
+    --card-bg-color: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
