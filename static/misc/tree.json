@@ -1,0 +1,164 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "HTML",
+              "type": "skill",
+              "score": 4
+            },
+            {
+              "name": "CSS",
+              "type": "skill",
+              "score": 4
+            },
+            {
+              "name": "JS",
+              "type": "skill",
+              "score": 3
+            }
+          ],
+          "name": "Web Front",
+          "type": "folder"
+        },
+        {
+          "name": "Bash",
+          "type": "skill",
+          "score": 3
+        },
+        {
+          "name": "Python",
+          "type": "skill",
+          "score": 2
+        }
+      ],
+      "name": "Programming",
+      "type": "folder"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "Systemd",
+              "type": "skill",
+              "score": 4
+            },
+            {
+              "name": "Fedora",
+              "type": "skill",
+              "score": 5
+            },
+            {
+              "name": "Debian",
+              "type": "skill",
+              "score": 3
+            },
+            {
+              "name": "Permissions",
+              "type": "skill",
+              "score": 2
+            }
+          ],
+          "name": "Linux",
+          "type": "folder"
+        },
+        {
+          "children": null,
+          "name": "Windows",
+          "type": "folder"
+        }
+      ],
+      "name": "Sysadmin",
+      "type": "folder"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "Nginx",
+              "type": "skill",
+              "score": 4
+            },
+            {
+              "name": "caddy",
+              "type": "skill",
+              "score": 4
+            }
+          ],
+          "name": "Reverse Proxy",
+          "type": "skill"
+        },
+        {
+          "children": [
+            {
+              "name": "DNSSEC",
+              "type": "skill",
+              "score": 3
+            },
+            {
+              "name": "Résolveur",
+              "type": "skill",
+              "score": 5
+            },
+            {
+              "name": "autoritaire",
+              "type": "skill",
+              "score": 5
+            },
+            {
+              "name": "AXFR/IXFR",
+              "type": "skill",
+              "score": 5
+            }
+          ],
+          "name": "DNS",
+          "type": "folder"
+        },
+        {
+          "name": "IPv6",
+          "type": "skill",
+          "score": 3
+        }
+      ],
+      "name": "Networking",
+      "type": "folder"
+    },
+    {
+      "children": [
+        {
+          "name": "French",
+          "type": "skill",
+          "score": 5
+        },
+        {
+          "name": "English",
+          "type": "skill",
+          "score": 4
+        },
+        {
+          "name": "Spanish",
+          "type": "skill",
+          "score": 3
+        },
+        {
+          "name": "Esperanto",
+          "type": "skill",
+          "score": 3
+        },
+        {
+          "name": "Finnish",
+          "type": "skill",
+          "score": 1
+        }
+      ],
+      "name": "Languages",
+      "type": "folder"
+    }
+  ],
+  "name": "My Skills",
+  "type": "folder"
+}

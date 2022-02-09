@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/montserrat.woff2') format('woff2'), url('/static/fonts/montserrat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/static/fonts/poppins.woff2') format('woff2'), url('/static/fonts/poppins.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  --main-bg-color: #141429;
+  --title-text-color: #F2F1F4;
+  --main-text-color: #F5F5F5;
+  --main-fonts: "Poppins", "sans-serif", "Apple Color Emoji";
+  --title-fonts: "Montserrat", "Poppins", "sans-serif", "Apple Color Emoji";
+  --main-cta-color: #BDABDA;
+  --main-cta-high-contrast-color: #9d81cc;
+  --card-bg-color: #0b0a12;
+  --card-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  scroll-snap-type: y mandatory;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--main-fonts);
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+section {
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+#about {
+  height: 100vh;
+}
+
+#myIcon {
+  width: 55px;
+  height: 55px;
+  margin: 30px;
+}
+
+#translateIcon {
+  float: right;
+  margin: 50px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+#translateIcon path {
+  fill: var(--main-cta-color);
+}
+
+.centeredContent {
+  width: 100vw;
+  padding: 0px 15vw;
+  margin-top: 50vh;
+  transform: translateY(calc(-50% - 55px - 60px));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centeredContent .textContent, .centeredContent #illustration {
+  max-width: 49%;
+  min-width: 300px;
+}
+
+.centeredContent #illustration {
+  min-width: 200px;
+}
+
+h1 {
+  color: var(--title-text-color);
+  font-family: var(--title-fonts);
+  font-size: 55px;
+}
+
+.purpleLine {
+  background: var(--main-cta-color);
+  height: 3px;
+  width: 70px;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.purpleLine:nth-child(3) {
+  margin-left: 20px;
+  margin-top: 7px;
+}
+
+.centeredContent .textContent p {
+  margin-top: 15px;
+  max-width: 90%;
+}
+
+.centeredTitle {
+  width: max-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5vw;
+}
+
+.graphContainer {
+  overflow-x: auto;
+}
+
+.graphContainer svg {
+  margin-left: 50%;
+  transform: translate(-50%)
+}
+
+.graphContainer svg > g {
+  margin-left: 50%;
+}
+
+.node circle:not(.node circle.skillScore) {
+    cursor: pointer;
+    fill: #161638;
+    stroke: var(--main-cta-high-contrast-color);
+    stroke-width: 2.5px;
+}
+
+.node text {
+    font-size: 17px;
+    fill: var(--main-text-color);
+    font-weight: 600;
+}
+
+text.clickable {
+  cursor: pointer;
+}
+
+path.link {
+    fill: none;
+    stroke: var(--main-text-color);
+    opacity: 30%;
+    stroke-width: 3px;
+}
+
+.skillCount.enabled {
+  background: var(--main-cta-high-contrast-color);
+  width: 15px;
+  height: 15px;
+}
+
+.card {
+  background: var(--card-bg-color);
+  margin: 10px 50px;
+  border-radius: 15px;
+  padding: 25px;
+  width: 350px;
+  box-shadow: var(--card-shadow);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  background: var(--main-cta-color);
+  margin-left: 50%;
+  transform: translatex(-50%);
+  margin-top: 23px;
+	display: block;
+	width: max-content;
+  padding: 7px 15px;
+  border-radius: 7px;
+  color: #000;
+}
+
+.cardContainer {
+  padding: 0px 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#translationContainer {
+  background: #F5F5F5;
+  border-radius: 5px;
+  color: #000;
+  width: max-content;
+  float: right;
+  position: absolute;
+  top: 90px;
+  right: 80px;
+  padding: 25px 25px;
+  box-shadow: var(--card-shadow);
+  display: none;
+  z-index: 100;
+}
+
+#translationContainer h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#translationContainer a {
+  display: block;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+#translationContainer a:hover {
+  color: var(--main-cta-high-contrast-color)
+}
+
+@media only screen and (max-width: 960px) {
+  .centeredContent #illustration {
+    margin-top: 100px;
+  }
+
+  .graphContainer svg {
+    transform: translate(-17%);
+  }
+
+  .centeredTitle {
+    padding-top: 15vh;
+  }
+}

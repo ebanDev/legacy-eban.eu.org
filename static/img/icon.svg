@@ -1,0 +1,22 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="500" height="500" rx="250" fill="white"/>
+<g filter="url(#filter0_f)">
+<ellipse cx="499.689" cy="233.29" rx="174.689" ry="176.29" fill="#97DE9C"/>
+<ellipse cx="290.186" cy="158.023" rx="181.624" ry="172.556" fill="#9AC0FF"/>
+<ellipse cx="219.863" cy="393.458" rx="174.689" ry="160.021" fill="#FF827B"/>
+<ellipse cx="60.6237" cy="240.968" rx="181.624" ry="172.556" fill="#BF9BFF"/>
+<ellipse cx="637.311" cy="369.25" rx="174.689" ry="166.155" fill="#FADF80"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f" x="-271" y="-164.532" width="1233" height="868.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur"/>
+</filter>
+<clipPath id="clip0">
+<rect width="500" height="500" rx="250" fill="white"/>
+</clipPath>
+</defs>
+</svg>
