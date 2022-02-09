@@ -260,4 +260,8 @@ path.link {
   .centeredTitle {
     padding-top: 15vh;
   }
+
+  h1 {
+    font-size: 8.5vw;
+  }
 }
