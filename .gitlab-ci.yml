@@ -1,0 +1,17 @@
+default:
+    image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
+
+stages:
+    - prod-deploy
+
+prod-deploy-job:
+    stage: prod-deploy
+    script:
+        - eval $(ssh-agent -s)
+        - mkdir -p ~/.ssh
+        - echo "$SSH_EBANVM01_PRIVATE_KEY" > ~/.ssh/id_ed25519
+        - chmod 600 ~/.ssh/id_ed25519
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+        - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/html
+    only:
+        - master
