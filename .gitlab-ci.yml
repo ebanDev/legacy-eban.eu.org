@@ -11,7 +11,7 @@ prod-deploy-job:
         - wget https://github.com/tdewolff/minify/releases/download/v2.10.0/minify_linux_amd64.tar.gz
         - tar -xf minify_linux_amd64.tar.gz -C /tmp
         - mv /tmp/minify /bin
-        - minify -r -o ./ ./
+        - minify --html-keep-comments -r -o ./ ./
         - eval $(ssh-agent -s)
         - mkdir -p ~/.ssh
         - echo "$SSH_EBANVM01_PRIVATE_KEY" > ~/.ssh/id_ed25519
