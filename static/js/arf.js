@@ -8,7 +8,7 @@ if (window.innerWidth < 640) {
 } else {
   var margin = [20, 120, 20, 140],
     width = 900 - margin[1] - margin[3],
-    height = 600 - margin[0] - margin[2],
+    height = 500 - margin[0] - margin[2],
     i = 0,
     duration = 350,
     root
@@ -73,7 +73,7 @@ function update(source) {
     return d.id || (d.id = ++i)
   })
 
-  skillEmojis = ["🥴", "😐",  "😅", "😄", "🤩"]
+  skillEmojis = ["😕", "😐",  "😅", "😄", "🤩"]
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node

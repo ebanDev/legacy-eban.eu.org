@@ -218,9 +218,9 @@ path.link {
 }
 
 #translationContainer {
-  background: #F5F5F5;
+  background: var(--card-bg-color);
   border-radius: 5px;
-  color: #000;
+  color: var(--main-text-color);
   width: max-content;
   float: right;
   position: absolute;
@@ -246,6 +246,18 @@ path.link {
 
 #translationContainer a:hover {
   color: var(--main-cta-high-contrast-color)
+}
+
+.masteryLevel {
+  margin-left: calc(50%);
+  transform: translate(-50%);
+  background: var(--card-bg-color);
+  display: block;
+  width: max-content;
+  padding: 10px 20px;
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  margin-top: 25px;
 }
 
 @media only screen and (max-width: 960px) {

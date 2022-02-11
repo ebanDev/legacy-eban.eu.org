@@ -12,5 +12,17 @@ if (userLang.includes("fr")) {
 
 function updateLang(lang) {
   tran.setLang(lang);
-  document.getElementById('translationContainer').style.display = "none";
+  toggleTranslationPanel()
+}
+
+toggled = false;
+
+function toggleTranslationPanel() {
+  if (toggled) {
+    document.getElementById('translationContainer').style.display = 'none'
+    toggled = !toggled
+  } else {
+    document.getElementById('translationContainer').style.display = 'block'
+    toggled = !toggled;
+  }
 }

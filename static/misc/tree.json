@@ -97,15 +97,15 @@
             {
               "name": "DNSSEC",
               "type": "skill",
-              "score": 3
+              "score": 4
             },
             {
-              "name": "Résolveur",
+              "name": "Resolver",
               "type": "skill",
               "score": 5
             },
             {
-              "name": "autoritaire",
+              "name": "Authoritative",
               "type": "skill",
               "score": 5
             },
