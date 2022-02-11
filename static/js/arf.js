@@ -7,12 +7,14 @@ if (window.innerWidth < 640) {
     root
 } else {
   var margin = [20, 120, 20, 140],
-    width = 900 - margin[1] - margin[3],
+    width = 1100 - margin[1] - margin[3],
     height = 500 - margin[0] - margin[2],
     i = 0,
     duration = 350,
     root
 }
+
+console.log(document.querySelector("svg").width)
 
 var tree = d3.layout.tree().size([height, width])
 
@@ -73,7 +75,7 @@ function update(source) {
     return d.id || (d.id = ++i)
   })
 
-  skillEmojis = ["😕", "😐",  "😅", "😄", "🤩"]
+  skillEmojis = ["😕", "😐",  "🙂", "😄", "🤩"]
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node

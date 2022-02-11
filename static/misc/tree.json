@@ -20,11 +20,16 @@
               "score": 3
             }
           ],
-          "name": "Web Front",
+          "name": "Web",
           "type": "folder"
         },
         {
           "name": "Bash",
+          "type": "skill",
+          "score": 3
+        },
+        {
+          "name": "CouchDB",
           "type": "skill",
           "score": 3
         },
@@ -42,19 +47,24 @@
         {
           "children": [
             {
-              "name": "Systemd",
+              "name": "Basic systemd usage",
+              "type": "skill",
+              "score": 4
+            },
+            {
+              "name": "Systemd services security (sandboxing)",
               "type": "skill",
               "score": 4
             },
             {
               "name": "Fedora",
               "type": "skill",
-              "score": 5
+              "score": 4
             },
             {
               "name": "Debian",
               "type": "skill",
-              "score": 3
+              "score": 4
             },
             {
               "name": "Permissions",
@@ -66,9 +76,14 @@
           "type": "folder"
         },
         {
-          "children": null,
-          "name": "Windows",
-          "type": "folder"
+          "name": "Docker",
+          "type": "skill",
+          "score": 4
+        },
+        {
+          "name": "Gitlab CI",
+          "type": "skill",
+          "score": 3
         }
       ],
       "name": "Sysadmin",
@@ -122,6 +137,11 @@
           "name": "IPv6",
           "type": "skill",
           "score": 3
+        },
+        {
+          "name": "Mikrotik",
+          "type": "skill",
+          "score": 2
         }
       ],
       "name": "Networking",

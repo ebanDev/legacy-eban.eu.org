@@ -144,8 +144,7 @@ h1 {
 }
 
 .graphContainer svg {
-  margin-left: 50%;
-  transform: translate(-50%)
+  margin-left: 20%;
 }
 
 .graphContainer svg > g {
