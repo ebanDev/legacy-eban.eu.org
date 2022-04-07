@@ -67,7 +67,18 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
+
+.centeredContent .textContent, .centeredContent #illustration {
+  max-width: 49%;
+  min-width: 300px;
+  width: max-content;
+}
+
+.centeredContent #illustration {
+  min-width: 200px;
+}
 
 h1 {
   color: var(--title-text-color);
@@ -91,6 +102,7 @@ h1 {
   margin-top: 7px; }
 
 .centeredTitle {
+<<<<<<< HEAD
   margin: 0 auto;
   padding: 6vh 0;
   width: max-content; }
@@ -104,6 +116,38 @@ h1 {
     #background {
       height: 100vh;
       width: initial !important; } }
+=======
+  width: max-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5vw;
+}
+
+.graphContainer {
+  overflow-x: auto;
+}
+
+.graphContainer svg {
+  margin-left: 20%;
+}
+
+.graphContainer svg > g {
+  margin-left: 50%;
+}
+
+.node circle:not(.node circle.skillScore) {
+    cursor: pointer;
+    fill: #161638;
+    stroke: var(--main-cta-high-contrast-color);
+    stroke-width: 2.5px;
+}
+
+.node text {
+    font-size: 17px;
+    fill: var(--main-text-color);
+    font-weight: 600;
+}
+>>>>>>> f0cd2cf4fb8ce0b4266d51979e5e2c0fa1efef20
 
 #about {
   height: 100vh; }
@@ -219,6 +263,7 @@ h1 {
   padding: 0 5vw;
   display: flex;
   justify-content: space-around;
+<<<<<<< HEAD
   flex-wrap: wrap; }
   #projects .cardContainer .card {
     width: 350px;
@@ -318,3 +363,70 @@ h1 {
         color: #000; }
 
 /*# sourceMappingURL=style.css.map */
+=======
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#translationContainer {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  color: var(--main-text-color);
+  width: max-content;
+  float: right;
+  position: absolute;
+  top: 90px;
+  right: 80px;
+  padding: 25px 25px;
+  box-shadow: var(--card-shadow);
+  display: none;
+  z-index: 100;
+}
+
+#translationContainer h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#translationContainer a {
+  display: block;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+#translationContainer a:hover {
+  color: var(--main-cta-high-contrast-color)
+}
+
+.masteryLevel {
+  margin-left: calc(50%);
+  transform: translate(-50%);
+  background: var(--card-bg-color);
+  display: block;
+  width: max-content;
+  padding: 10px 20px;
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 960px) {
+  .centeredContent #illustration {
+    margin-top: 100px;
+  }
+
+  .graphContainer svg {
+    transform: translate(-17%);
+  }
+
+  .centeredTitle {
+    padding-top: 15vh;
+  }
+
+  h1 {
+    font-size: 8.5vw;
+  }
+}
+>>>>>>> f0cd2cf4fb8ce0b4266d51979e5e2c0fa1efef20

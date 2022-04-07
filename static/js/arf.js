@@ -14,6 +14,8 @@ if (window.innerWidth < 640) {
     root
 }
 
+console.log(document.querySelector("svg").width)
+
 var tree = d3.layout.tree().size([height, width])
 
 var diagonal = d3.svg.diagonal().projection(function(d) {
