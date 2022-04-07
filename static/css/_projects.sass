@@ -1,0 +1,46 @@
+#projects
+  .cardContainer
+    padding: 0 5vw
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    .card
+      width: 350px
+      transition: .1s
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding: 25px
+      margin: 20px 50px
+      @include cardStyle
+      @include onSmallMobile
+        width: 90%
+        margin: 10px
+      &:hover
+        transform: translateY(-3px) scale(1.01)
+      .projectTitle
+        img
+          height: 30px
+          max-width: 30px
+          vertical-align: middle
+        h3
+          font-size: 20px
+          display: inline
+          margin-left: 5px
+          vertical-align: middle
+      p
+        margin-top: 10px
+      a
+        text-decoration: none
+        background: var(--main-cta-color)
+        margin-top: 15px
+        display: block
+        width: max-content
+        padding: 7px 15px
+        border-radius: 7px
+        color: #000
+        transition: .2s
+        align-self: center
+        &:hover
+          transform: scale(1.05)
+          background: var(--main-cta-high-contrast-color)

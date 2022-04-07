@@ -1,0 +1,24 @@
+#navArrows
+  display: flex
+  position: fixed
+  bottom: 50px
+  right: 50px
+  padding: 7px 10px
+  z-index: 2
+  flex-direction: column
+  gap: 7px
+  @include cardStyle
+  @include onMobile
+    display: none
+  svg
+    cursor: pointer
+    transition: .2s
+    &:hover
+      transform: scale(1.1)
+      color: var(--main-cta-high-contrast-color)
+    &.disabled
+      opacity: 50%
+      cursor: default
+      &:hover
+        transform: scale(1)
+        color: #000

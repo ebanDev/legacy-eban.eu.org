@@ -1,14 +1,14 @@
 if (window.innerWidth < 640) {
   var margin = [20, 120, 20, 140],
-    width = 1280 - margin[1] - margin[3],
-    height = 500 - margin[0] - margin[2],
+    width = 1280,
+    height = window.innerHeight / 1.6,
     i = 0,
     duration = 350,
     root
 } else {
   var margin = [20, 120, 20, 140],
-    width = 900 - margin[1] - margin[3],
-    height = 600 - margin[0] - margin[2],
+    width = 1100,
+    height = window.innerHeight / 1.7,
     i = 0,
     duration = 350,
     root
@@ -60,7 +60,7 @@ function update(source) {
   // Normalize for fixed-depth.
   if (window.innerWidth < 640) {
     nodes.forEach(function(d) {
-      d.y = d.depth * 160
+      d.y = d.depth * 120
     })
   } else {
     nodes.forEach(function(d) {
@@ -73,7 +73,7 @@ function update(source) {
     return d.id || (d.id = ++i)
   })
 
-  skillEmojis = ["🥴", "😐",  "😅", "😄", "🤩"]
+  skillEmojis = ["😕", "😐",  "🙂", "😄", "🤩"]
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node
@@ -214,3 +214,17 @@ function toggle(d) {
     d._children = null
   }
 }
+
+const target = document.querySelector('.graphContainer');
+function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleIntersection);
+observer.observe(target);

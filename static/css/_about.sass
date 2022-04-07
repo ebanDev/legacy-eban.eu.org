@@ -1,0 +1,56 @@
+#about
+  height: 100vh
+  .topIconsContainer
+    display: flex
+    justify-content: space-between
+    width: 100vw
+    padding: 30px
+    align-items: center
+    img
+      width: 55px
+    svg
+      width: 30px
+      height: 30px
+      transition: .2s
+      cursor: pointer
+      color: var(--main-cta-color)
+      &:hover
+        color: var(--main-cta-high-contrast-color)
+        transform: scale(1.1)
+  #translationContainer
+    @include cardStyle
+    border-radius: 5px
+    width: max-content
+    position: absolute
+    top: 80px
+    right: 80px
+    padding: 25px
+    z-index: 3
+    display: none
+    h4
+      font-size: 18px
+      margin-bottom: 10px
+    a
+      display: block
+      cursor: pointer
+      margin-top: 3px
+      &:hover
+        color: var(--main-cta-high-contrast-color)
+
+  .centeredContent
+    transform: translateY(calc(-50% - 55px - 60px))
+    .textContent, #illustration
+      max-width: 49%
+      min-width: 300px
+      width: max-content
+
+    .textContent
+      p
+        margin-top: 15px
+        max-width: 90%
+    #illustration
+      min-width: 200px
+      @include onMobile
+        margin-top: 100px
+      @include onSmallMobile
+        display: none

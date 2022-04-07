@@ -16,10 +16,6 @@ d3 = (function () {
             t.prototype = n
         }
     }
-    function r(t) {
-        for (var n = -1, e = t.length, r = []; e > ++n; ) r.push(t[n])
-        return r
-    }
     function u(t) {
         return Array.prototype.slice.call(t)
     }
@@ -48,13 +44,6 @@ d3 = (function () {
     }
     function s(t) {
         return t.length
-    }
-    function h(t) {
-        return t.trim().replace(/\s+/g, ' ')
-    }
-    function g(t) {
-        for (var n = 1; (t * n) % 1; ) n *= 10
-        return n
     }
     function p(t) {
         return 1 === t.length
@@ -6483,131 +6472,6 @@ d3 = (function () {
             )
         }),
         (Ci.layout.treemap = function () {
-            function t(t, n) {
-                for (var e, r, u = -1, i = t.length; i > ++u; )
-                    (r = (e = t[u]).value * (0 > n ? 0 : n)), (e.area = isNaN(r) || 0 >= r ? 0 : r)
-            }
-            function n(e) {
-                var i = e.children
-                if (i && i.length) {
-                    var a,
-                        o,
-                        c,
-                        l = s(e),
-                        f = [],
-                        h = i.slice(),
-                        p = 1 / 0,
-                        d =
-                            'slice' === g
-                                ? l.dx
-                                : 'dice' === g
-                                ? l.dy
-                                : 'slice-dice' === g
-                                ? 1 & e.depth
-                                    ? l.dy
-                                    : l.dx
-                                : Math.min(l.dx, l.dy)
-                    for (t(h, (l.dx * l.dy) / e.value), f.area = 0; (c = h.length) > 0; )
-                        f.push((a = h[c - 1])),
-                            (f.area += a.area),
-                            'squarify' !== g || p >= (o = r(f, d))
-                                ? (h.pop(), (p = o))
-                                : ((f.area -= f.pop().area),
-                                  u(f, d, l, !1),
-                                  (d = Math.min(l.dx, l.dy)),
-                                  (f.length = f.area = 0),
-                                  (p = 1 / 0))
-                    f.length && (u(f, d, l, !0), (f.length = f.area = 0)), i.forEach(n)
-                }
-            }
-            function e(n) {
-                var r = n.children
-                if (r && r.length) {
-                    var i,
-                        a = s(n),
-                        o = r.slice(),
-                        c = []
-                    for (t(o, (a.dx * a.dy) / n.value), c.area = 0; (i = o.pop()); )
-                        c.push(i), (c.area += i.area), null != i.z && (u(c, i.z ? a.dx : a.dy, a, !o.length), (c.length = c.area = 0))
-                    r.forEach(e)
-                }
-            }
-            function r(t, n) {
-                for (var e, r = t.area, u = 0, i = 1 / 0, a = -1, o = t.length; o > ++a; )
-                    (e = t[a].area) && (i > e && (i = e), e > u && (u = e))
-                return (r *= r), (n *= n), r ? Math.max((n * u * p) / r, r / (n * i * p)) : 1 / 0
-            }
-            function u(t, n, e, r) {
-                var u,
-                    i = -1,
-                    a = t.length,
-                    o = e.x,
-                    l = e.y,
-                    f = n ? c(t.area / n) : 0
-                if (n == e.dx) {
-                    for ((r || f > e.dy) && (f = e.dy); a > ++i; )
-                        (u = t[i]), (u.x = o), (u.y = l), (u.dy = f), (o += u.dx = Math.min(e.x + e.dx - o, f ? c(u.area / f) : 0))
-                    ;(u.z = !0), (u.dx += e.x + e.dx - o), (e.y += f), (e.dy -= f)
-                } else {
-                    for ((r || f > e.dx) && (f = e.dx); a > ++i; )
-                        (u = t[i]), (u.x = o), (u.y = l), (u.dx = f), (l += u.dy = Math.min(e.y + e.dy - l, f ? c(u.area / f) : 0))
-                    ;(u.z = !1), (u.dy += e.y + e.dy - l), (e.x += f), (e.dx -= f)
-                }
-            }
-            function i(r) {
-                var u = a || o(r),
-                    i = u[0]
-                return (
-                    (i.x = 0),
-                    (i.y = 0),
-                    (i.dx = l[0]),
-                    (i.dy = l[1]),
-                    a && o.revalue(i),
-                    t([i], (i.dx * i.dy) / i.value),
-                    (a ? e : n)(i),
-                    h && (a = u),
-                    u
-                )
-            }
-            var a,
-                o = Ci.layout.hierarchy(),
-                c = Math.round,
-                l = [1, 1],
-                f = null,
-                s = Pr,
-                h = !1,
-                g = 'squarify',
-                p = 0.5 * (1 + Math.sqrt(5))
-            return (
-                (i.size = function (t) {
-                    return arguments.length ? ((l = t), i) : l
-                }),
-                (i.padding = function (t) {
-                    function n(n) {
-                        var e = t.call(i, n, n.depth)
-                        return null == e ? Pr(n) : Rr(n, 'number' == typeof e ? [e, e, e, e] : e)
-                    }
-                    function e(n) {
-                        return Rr(n, t)
-                    }
-                    if (!arguments.length) return f
-                    var r
-                    return (s = null == (f = t) ? Pr : 'function' == (r = typeof t) ? n : 'number' === r ? ((t = [t, t, t, t]), e) : e), i
-                }),
-                (i.round = function (t) {
-                    return arguments.length ? ((c = t ? Math.round : Number), i) : c != Number
-                }),
-                (i.sticky = function (t) {
-                    return arguments.length ? ((h = t), (a = null), i) : h
-                }),
-                (i.ratio = function (t) {
-                    return arguments.length ? ((p = t), i) : p
-                }),
-                (i.mode = function (t) {
-                    return arguments.length ? ((g = t + ''), i) : g
-                }),
-                lr(i, o)
-            )
         }),
         (Ci.csv = Or(',', 'text/csv')),
         (Ci.tsv = Or('	', 'text/tab-separated-values')),
@@ -6709,19 +6573,11 @@ d3 = (function () {
         return Fu(co)
     }).raw = co
     var lo = Uu(function (t) {
-        var n = Math.acos(t)
-        return n && n / Math.sin(n)
     }, a)
     ;((Ci.geo.azimuthalEquidistant = function () {
-        return Fu(lo)
     }).raw = lo),
         (Ci.geo.bounds = tu(a)),
         (Ci.geo.centroid = function (t) {
-            ;(fo = so = ho = go = po = 0), Ci.geo.stream(t, mo)
-            var n
-            return so && Math.abs((n = Math.sqrt(ho * ho + go * go + po * po))) > qi
-                ? [Math.atan2(go, ho) * Di, Math.asin(Math.max(-1, Math.min(1, po / n))) * Di]
-                : void 0
         })
     var fo,
         so,
@@ -6736,201 +6592,38 @@ d3 = (function () {
             lineStart: ru,
             lineEnd: uu,
             polygonStart: function () {
-                2 > fo && ((fo = 2), (so = ho = go = po = 0)), (mo.lineStart = eu)
             },
             polygonEnd: function () {
-                mo.lineStart = ru
             },
         }
     Ci.geo.circle = function () {
-        function t() {
-            var t = 'function' == typeof r ? r.apply(this, arguments) : r,
-                n = Pu(-t[0] * zi, -t[1] * zi, 0).invert,
-                u = []
-            return (
-                e(null, null, 1, {
-                    point: function (t, e) {
-                        u.push((t = n(t, e))), (t[0] *= Di), (t[1] *= Di)
-                    },
-                }),
-                { type: 'Polygon', coordinates: [u] }
-            )
-        }
-        var n,
-            e,
-            r = [0, 0],
-            u = 6
-        return (
-            (t.origin = function (n) {
-                return arguments.length ? ((r = n), t) : r
-            }),
-            (t.angle = function (r) {
-                return arguments.length ? ((e = iu((n = +r) * zi, u * zi)), t) : n
-            }),
-            (t.precision = function (r) {
-                return arguments.length ? ((e = iu(n * zi, (u = +r) * zi)), t) : u
-            }),
-            t.angle(90)
-        )
     }
     var vo = ou(o, pu, mu)
     ;(Ci.geo.equirectangular = function () {
-        return Fu(Mu).scale(250 / Ti)
     }).raw = Mu.invert = Mu
     var yo = Uu(function (t) {
-        return 1 / t
     }, Math.atan)
     ;((Ci.geo.gnomonic = function () {
-        return Fu(yo)
     }).raw = yo),
         (Ci.geo.graticule = function () {
-            function t() {
-                return {
-                    type: 'MultiLineString',
-                    coordinates: n(),
-                }
-            }
-            function n() {
-                return Ci.range(Math.ceil(r / c) * c, e, c)
-                    .map(a)
-                    .concat(Ci.range(Math.ceil(i / l) * l, u, l).map(o))
-            }
-            var e,
-                r,
-                u,
-                i,
-                a,
-                o,
-                c = 22.5,
-                l = c,
-                f = 2.5
-            return (
-                (t.lines = function () {
-                    return n().map(function (t) {
-                        return {
-                            type: 'LineString',
-                            coordinates: t,
-                        }
-                    })
-                }),
-                (t.outline = function () {
-                    return {
-                        type: 'Polygon',
-                        coordinates: [a(r).concat(o(u).slice(1), a(e).reverse().slice(1), o(i).reverse().slice(1))],
-                    }
-                }),
-                (t.extent = function (n) {
-                    return arguments.length
-                        ? ((r = +n[0][0]),
-                          (e = +n[1][0]),
-                          (i = +n[0][1]),
-                          (u = +n[1][1]),
-                          r > e && ((n = r), (r = e), (e = n)),
-                          i > u && ((n = i), (i = u), (u = n)),
-                          t.precision(f))
-                        : [
-                              [r, i],
-                              [e, u],
-                          ]
-                }),
-                (t.step = function (n) {
-                    return arguments.length ? ((c = +n[0]), (l = +n[1]), t) : [c, l]
-                }),
-                (t.precision = function (n) {
-                    return arguments.length ? ((f = +n), (a = bu(i, u, f)), (o = xu(r, e, f)), t) : f
-                }),
-                t.extent([
-                    [-180 + qi, -90 + qi],
-                    [180 - qi, 90 - qi],
-                ])
-            )
+
         }),
         (Ci.geo.interpolate = function (t, n) {
             return wu(t[0] * zi, t[1] * zi, n[0] * zi, n[1] * zi)
         }),
         (Ci.geo.greatArc = function () {
-            function e() {
-                for (
-                    var t = r || a.apply(this, arguments),
-                        n = u || o.apply(this, arguments),
-                        e = i || Ci.geo.interpolate(t, n),
-                        l = 0,
-                        f = c / e.distance,
-                        s = [t];
-                    1 > (l += f);
 
-                )
-                    s.push(e(l))
-                return s.push(n), { type: 'LineString', coordinates: s }
-            }
-            var r,
-                u,
-                i,
-                a = n,
-                o = t,
-                c = 6 * zi
-            return (
-                (e.distance = function () {
-                    return (i || Ci.geo.interpolate(r || a.apply(this, arguments), u || o.apply(this, arguments))).distance
-                }),
-                (e.source = function (t) {
-                    return arguments.length
-                        ? ((a = t), (r = 'function' == typeof t ? null : t), (i = r && u ? Ci.geo.interpolate(r, u) : null), e)
-                        : a
-                }),
-                (e.target = function (t) {
-                    return arguments.length
-                        ? ((o = t), (u = 'function' == typeof t ? null : t), (i = r && u ? Ci.geo.interpolate(r, u) : null), e)
-                        : o
-                }),
-                (e.precision = function (t) {
-                    return arguments.length ? ((c = t * zi), e) : c / zi
-                }),
-                e
-            )
         }),
         (Su.invert = function (t, n) {
-            return [2 * Ti * t, 2 * Math.atan(Math.exp(2 * Ti * n)) - Ti / 2]
         }),
         ((Ci.geo.mercator = function () {
-            return Fu(Su).scale(500)
         }).raw = Su)
     var Mo = Uu(function () {
-        return 1
     }, Math.asin)
     ;((Ci.geo.orthographic = function () {
-        return Fu(Mo)
     }).raw = Mo),
         (Ci.geo.path = function () {
-            function t(t) {
-                return t && Ci.geo.stream(t, r(u.pointRadius('function' == typeof i ? +i.apply(this, arguments) : i))), u.result()
-            }
-            var n,
-                e,
-                r,
-                u,
-                i = 4.5
-            return (
-                (t.area = function (t) {
-                    return (bo = 0), Ci.geo.stream(t, r(_o)), bo
-                }),
-                (t.centroid = function (t) {
-                    return (fo = ho = go = po = 0), Ci.geo.stream(t, r(wo)), po ? [ho / po, go / po] : void 0
-                }),
-                (t.bounds = function (t) {
-                    return tu(r)(t)
-                }),
-                (t.projection = function (e) {
-                    return arguments.length ? ((r = (n = e) ? e.stream || Eu(e) : a), t) : n
-                }),
-                (t.context = function (n) {
-                    return arguments.length ? ((u = null == (e = n) ? new Au() : new Nu(n)), t) : e
-                }),
-                (t.pointRadius = function (n) {
-                    return arguments.length ? ((i = 'function' == typeof n ? n : +n), t) : i
-                }),
-                t.projection(Ci.geo.albersUsa()).context(null)
-            )
+
         })
     var bo,
         xo,
@@ -6939,10 +6632,8 @@ d3 = (function () {
             lineStart: Pn,
             lineEnd: Pn,
             polygonStart: function () {
-                ;(xo = 0), (_o.lineStart = Tu)
             },
             polygonEnd: function () {
-                ;(_o.lineStart = _o.lineEnd = _o.point = Pn), (bo += Math.abs(xo / 2))
             },
         },
         wo = {
@@ -6950,40 +6641,31 @@ d3 = (function () {
             lineStart: Cu,
             lineEnd: zu,
             polygonStart: function () {
-                wo.lineStart = Du
             },
             polygonEnd: function () {
-                ;(wo.point = qu), (wo.lineStart = Cu), (wo.lineEnd = zu)
             },
         }
     Ci.geo.area = function (t) {
-        return (So = 0), Ci.geo.stream(t, Ao), So
     }
     var So,
         ko,
         Eo,
         Ao = {
             sphere: function () {
-                So += 4 * Ti
             },
             point: Pn,
             lineStart: Pn,
             lineEnd: Pn,
             polygonStart: function () {
-                ;(ko = 1), (Eo = 0), (Ao.lineStart = Lu)
             },
             polygonEnd: function () {
-                var t = 2 * Math.atan2(Eo, ko)
-                ;(So += 0 > t ? 4 * Ti + t : t), (Ao.lineStart = Ao.lineEnd = Ao.point = Pn)
             },
         }
     ;(Ci.geo.projection = Fu), (Ci.geo.projectionMutator = Hu)
     var No = Uu(
         function (t) {
-            return 1 / (1 + t)
         },
         function (t) {
-            return 2 * Math.atan(t)
         }
     )
     ;((Ci.geo.stereographic = function () {
@@ -6991,287 +6673,64 @@ d3 = (function () {
     }).raw = No),
         (Ci.geom = {}),
         (Ci.geom.hull = function (t) {
-            if (3 > t.length) return []
-            var n,
-                e,
-                r,
-                u,
-                i,
-                a,
-                o,
-                c,
-                l,
-                f,
-                s = t.length,
-                h = s - 1,
-                g = [],
-                p = [],
-                d = 0
-            for (n = 1; s > n; ++n) t[n][1] < t[d][1] ? (d = n) : t[n][1] == t[d][1] && (d = t[n][0] < t[d][0] ? n : d)
-            for (n = 0; s > n; ++n)
-                n !== d &&
-                    ((u = t[n][1] - t[d][1]),
-                    (r = t[n][0] - t[d][0]),
-                    g.push({
-                        angle: Math.atan2(u, r),
-                        index: n,
-                    }))
-            for (
-                g.sort(function (t, n) {
-                    return t.angle - n.angle
-                }),
-                    l = g[0].angle,
-                    c = g[0].index,
-                    o = 0,
-                    n = 1;
-                h > n;
-                ++n
-            )
-                (e = g[n].index),
-                    l == g[n].angle
-                        ? ((r = t[c][0] - t[d][0]),
-                          (u = t[c][1] - t[d][1]),
-                          (i = t[e][0] - t[d][0]),
-                          (a = t[e][1] - t[d][1]),
-                          r * r + u * u >= i * i + a * a ? (g[n].index = -1) : ((g[o].index = -1), (l = g[n].angle), (o = n), (c = e)))
-                        : ((l = g[n].angle), (o = n), (c = e))
-            for (p.push(d), n = 0, e = 0; 2 > n; ++e) -1 !== g[e].index && (p.push(g[e].index), n++)
-            for (f = p.length; h > e; ++e)
-                if (-1 !== g[e].index) {
-                    for (; !Iu(p[f - 2], p[f - 1], g[e].index, t); ) --f
-                    p[f++] = g[e].index
-                }
-            var m = []
-            for (n = 0; f > n; ++n) m.push(t[p[n]])
-            return m
+
         }),
         (Ci.geom.polygon = function (t) {
-            return (
-                (t.area = function () {
-                    for (var n = 0, e = t.length, r = t[e - 1][1] * t[0][0] - t[e - 1][0] * t[0][1]; e > ++n; )
-                        r += t[n - 1][1] * t[n][0] - t[n - 1][0] * t[n][1]
-                    return 0.5 * r
-                }),
-                (t.centroid = function (n) {
-                    var e,
-                        r,
-                        u = -1,
-                        i = t.length,
-                        a = 0,
-                        o = 0,
-                        c = t[i - 1]
-                    for (arguments.length || (n = -1 / (6 * t.area())); i > ++u; )
-                        (e = c), (c = t[u]), (r = e[0] * c[1] - c[0] * e[1]), (a += (e[0] + c[0]) * r), (o += (e[1] + c[1]) * r)
-                    return [a * n, o * n]
-                }),
-                (t.clip = function (n) {
-                    for (var e, r, u, i, a, o, c = -1, l = t.length, f = t[l - 1]; l > ++c; ) {
-                        for (e = n.slice(), n.length = 0, i = t[c], a = e[(u = e.length) - 1], r = -1; u > ++r; )
-                            (o = e[r]),
-                                Vu(o, f, i) ? (Vu(a, f, i) || n.push(Zu(a, o, f, i)), n.push(o)) : Vu(a, f, i) && n.push(Zu(a, o, f, i)),
-                                (a = o)
-                        f = i
-                    }
-                    return n
-                }),
-                t
-            )
+
         }),
         (Ci.geom.voronoi = function (t) {
-            var n = t.map(function () {
-                    return []
-                }),
-                e = 1e6
-            return (
-                Xu(t, function (t) {
-                    var r, u, i, a, o, c
-                    1 === t.a && t.b >= 0 ? ((r = t.ep.r), (u = t.ep.l)) : ((r = t.ep.l), (u = t.ep.r)),
-                        1 === t.a
-                            ? ((o = r ? r.y : -e), (i = t.c - t.b * o), (c = u ? u.y : e), (a = t.c - t.b * c))
-                            : ((i = r ? r.x : -e), (o = t.c - t.a * i), (a = u ? u.x : e), (c = t.c - t.a * a))
-                    var l = [i, o],
-                        f = [a, c]
-                    n[t.region.l.index].push(l, f), n[t.region.r.index].push(l, f)
-                }),
-                (n = n.map(function (n, e) {
-                    var r = t[e][0],
-                        u = t[e][1],
-                        i = n.map(function (t) {
-                            return Math.atan2(t[0] - r, t[1] - u)
-                        }),
-                        a = Ci.range(n.length).sort(function (t, n) {
-                            return i[t] - i[n]
-                        })
-                    return a
-                        .filter(function (t, n) {
-                            return !n || i[t] - i[a[n - 1]] > qi
-                        })
-                        .map(function (t) {
-                            return n[t]
-                        })
-                })),
-                n.forEach(function (n, r) {
-                    var u = n.length
-                    if (!u) return n.push([-e, -e], [-e, e], [e, e], [e, -e])
-                    if (!(u > 2)) {
-                        var i = t[r],
-                            a = n[0],
-                            o = n[1],
-                            c = i[0],
-                            l = i[1],
-                            f = a[0],
-                            s = a[1],
-                            h = o[0],
-                            g = o[1],
-                            p = Math.abs(h - f),
-                            d = g - s
-                        if (qi > Math.abs(d)) {
-                            var m = s > l ? -e : e
-                            n.push([-e, m], [e, m])
-                        } else if (qi > p) {
-                            var v = f > c ? -e : e
-                            n.push([v, -e], [v, e])
-                        } else {
-                            var m = (f - c) * (g - s) > (h - f) * (s - l) ? e : -e,
-                                y = Math.abs(d) - p
-                            qi > Math.abs(y) ? n.push([0 > d ? m : -m, m]) : (y > 0 && (m *= -1), n.push([-e, m], [e, m]))
-                        }
-                    }
-                }),
-                n
-            )
+
         })
     var To = { l: 'r', r: 'l' }
     ;(Ci.geom.delaunay = function (t) {
-        var n = t.map(function () {
-                return []
-            }),
-            e = []
-        return (
-            Xu(t, function (e) {
-                n[e.region.l.index].push(t[e.region.r.index])
-            }),
-            n.forEach(function (n, r) {
-                var u = t[r],
-                    i = u[0],
-                    a = u[1]
-                n.forEach(function (t) {
-                    t.angle = Math.atan2(t[0] - i, t[1] - a)
-                }),
-                    n.sort(function (t, n) {
-                        return t.angle - n.angle
-                    })
-                for (var o = 0, c = n.length - 1; c > o; o++) e.push([u, n[o], n[o + 1]])
-            }),
-            e
-        )
+
     }),
         (Ci.geom.quadtree = function (t, n, e, r, u) {
-            function i(t, n, e, r, u, i) {
-                if (!isNaN(n.x) && !isNaN(n.y))
-                    if (t.leaf) {
-                        var o = t.point
-                        o
-                            ? 0.01 > Math.abs(o.x - n.x) + Math.abs(o.y - n.y)
-                                ? a(t, n, e, r, u, i)
-                                : ((t.point = null), a(t, o, e, r, u, i), a(t, n, e, r, u, i))
-                            : (t.point = n)
-                    } else a(t, n, e, r, u, i)
-            }
-            function a(t, n, e, r, u, a) {
-                var o = 0.5 * (e + u),
-                    c = 0.5 * (r + a),
-                    l = n.x >= o,
-                    f = n.y >= c,
-                    s = (f << 1) + l
-                ;(t.leaf = !1), (t = t.nodes[s] || (t.nodes[s] = Bu())), l ? (e = o) : (u = o), f ? (r = c) : (a = c), i(t, n, e, r, u, a)
-            }
-            var o,
-                c = -1,
-                l = t.length
-            if (5 > arguments.length)
-                if (3 === arguments.length) (u = e), (r = n), (e = n = 0)
-                else
-                    for (n = e = 1 / 0, r = u = -1 / 0; l > ++c; )
-                        (o = t[c]), n > o.x && (n = o.x), e > o.y && (e = o.y), o.x > r && (r = o.x), o.y > u && (u = o.y)
-            var f = r - n,
-                s = u - e
-            f > s ? (u = e + f) : (r = n + s)
-            var h = Bu()
-            return (
-                (h.add = function (t) {
-                    i(h, t, n, e, r, u)
-                }),
-                (h.visit = function (t) {
-                    $u(t, h, n, e, r, u)
-                }),
-                t.forEach(h.add),
-                h
-            )
+
         }),
         (Ci.time = {})
     var qo = Date,
         Co = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     Ju.prototype = {
         getDate: function () {
-            return this._.getUTCDate()
         },
         getDay: function () {
-            return this._.getUTCDay()
         },
         getFullYear: function () {
-            return this._.getUTCFullYear()
         },
         getHours: function () {
-            return this._.getUTCHours()
         },
         getMilliseconds: function () {
-            return this._.getUTCMilliseconds()
         },
         getMinutes: function () {
-            return this._.getUTCMinutes()
         },
         getMonth: function () {
-            return this._.getUTCMonth()
         },
         getSeconds: function () {
-            return this._.getUTCSeconds()
         },
         getTime: function () {
-            return this._.getTime()
         },
         getTimezoneOffset: function () {
-            return 0
         },
         valueOf: function () {
-            return this._.valueOf()
         },
         setDate: function () {
-            zo.setUTCDate.apply(this._, arguments)
         },
         setDay: function () {
-            zo.setUTCDay.apply(this._, arguments)
         },
         setFullYear: function () {
-            zo.setUTCFullYear.apply(this._, arguments)
         },
         setHours: function () {
-            zo.setUTCHours.apply(this._, arguments)
         },
         setMilliseconds: function () {
-            zo.setUTCMilliseconds.apply(this._, arguments)
         },
         setMinutes: function () {
-            zo.setUTCMinutes.apply(this._, arguments)
         },
         setMonth: function () {
-            zo.setUTCMonth.apply(this._, arguments)
         },
         setSeconds: function () {
-            zo.setUTCSeconds.apply(this._, arguments)
         },
         setTime: function () {
-            zo.setTime.apply(this._, arguments)
         },
     }
     var zo = Date.prototype,
@@ -7283,36 +6742,11 @@ d3 = (function () {
         Po = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         Ro = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     Ci.time.format = function (t) {
-        function n(n) {
-            for (var r, u, i, a = [], o = -1, c = 0; e > ++o; )
-                37 === t.charCodeAt(o) &&
-                    (a.push(t.substring(c, o)),
-                    null != (u = Xo[(r = t.charAt(++o))]) && (r = t.charAt(++o)),
-                    (i = Bo[r]) && (r = i(n, null == u ? ('e' === r ? ' ' : '0') : u)),
-                    a.push(r),
-                    (c = o + 1))
-            return a.push(t.substring(c, o)), a.join('')
-        }
         var e = t.length
         return (
             (n.parse = function (n) {
-                var e = {
-                        y: 1900,
-                        m: 0,
-                        d: 1,
-                        H: 0,
-                        M: 0,
-                        S: 0,
-                        L: 0,
-                    },
-                    r = Gu(e, t, n, 0)
-                if (r != n.length) return null
-                'p' in e && (e.H = (e.H % 12) + 12 * e.p)
-                var u = new qo()
-                return u.setFullYear(e.y, e.m, e.d), u.setHours(e.H, e.M, e.S, e.L), u
             }),
             (n.toString = function () {
-                return t
             }),
             n
         )
@@ -7326,68 +6760,48 @@ d3 = (function () {
         Xo = { '-': '', _: ' ', 0: '0' },
         Bo = {
             a: function (t) {
-                return jo[t.getDay()]
             },
             A: function (t) {
-                return Ho[t.getDay()]
             },
             b: function (t) {
-                return Ro[t.getMonth()]
             },
             B: function (t) {
-                return Po[t.getMonth()]
             },
             c: Ci.time.format(Do),
             d: function (t, n) {
-                return Qu(t.getDate(), n, 2)
             },
             e: function (t, n) {
-                return Qu(t.getDate(), n, 2)
             },
             H: function (t, n) {
-                return Qu(t.getHours(), n, 2)
             },
             I: function (t, n) {
-                return Qu(t.getHours() % 12 || 12, n, 2)
             },
             j: function (t, n) {
-                return Qu(1 + Ci.time.dayOfYear(t), n, 3)
             },
             L: function (t, n) {
-                return Qu(t.getMilliseconds(), n, 3)
             },
             m: function (t, n) {
-                return Qu(t.getMonth() + 1, n, 2)
             },
             M: function (t, n) {
-                return Qu(t.getMinutes(), n, 2)
             },
             p: function (t) {
-                return t.getHours() >= 12 ? 'PM' : 'AM'
             },
             S: function (t, n) {
-                return Qu(t.getSeconds(), n, 2)
             },
             U: function (t, n) {
-                return Qu(Ci.time.sundayOfYear(t), n, 2)
             },
             w: function (t) {
-                return t.getDay()
             },
             W: function (t, n) {
-                return Qu(Ci.time.mondayOfYear(t), n, 2)
             },
             x: Ci.time.format(Lo),
             X: Ci.time.format(Fo),
             y: function (t, n) {
-                return Qu(t.getFullYear() % 100, n, 2)
             },
             Y: function (t, n) {
-                return Qu(t.getFullYear() % 1e4, n, 4)
             },
             Z: vi,
             '%': function () {
-                return '%'
             },
         },
         $o = {
@@ -7413,25 +6827,9 @@ d3 = (function () {
         Jo = /^\s*\d+/,
         Go = Ci.map({ am: 0, pm: 1 })
     Ci.time.format.utc = function (t) {
-        function n(t) {
-            try {
-                qo = Ju
-                var n = new qo()
-                return (n._ = t), e(n)
-            } finally {
-                qo = Date
-            }
-        }
         var e = Ci.time.format(t)
         return (
             (n.parse = function (t) {
-                try {
-                    qo = Ju
-                    var n = e.parse(t)
-                    return n && n._
-                } finally {
-                    qo = Date
-                }
             }),
             (n.toString = e.toString),
             n
@@ -7440,87 +6838,43 @@ d3 = (function () {
     var Ko = Ci.time.format.utc('%Y-%m-%dT%H:%M:%S.%LZ')
     ;(Ci.time.format.iso = Date.prototype.toISOString && +new Date('2000-01-01T00:00:00.000Z') ? yi : Ko),
         (yi.parse = function (t) {
-            var n = new Date(t)
-            return isNaN(n) ? null : n
         }),
         (yi.toString = Ko.toString),
         (Ci.time.second = Mi(
             function (t) {
-                return new qo(1e3 * Math.floor(t / 1e3))
             },
-            function (t, n) {
-                t.setTime(t.getTime() + 1e3 * Math.floor(n))
-            },
-            function (t) {
-                return t.getSeconds()
-            }
         )),
         (Ci.time.seconds = Ci.time.second.range),
         (Ci.time.seconds.utc = Ci.time.second.utc.range),
         (Ci.time.minute = Mi(
             function (t) {
-                return new qo(6e4 * Math.floor(t / 6e4))
             },
-            function (t, n) {
-                t.setTime(t.getTime() + 6e4 * Math.floor(n))
-            },
-            function (t) {
-                return t.getMinutes()
-            }
         )),
         (Ci.time.minutes = Ci.time.minute.range),
         (Ci.time.minutes.utc = Ci.time.minute.utc.range),
         (Ci.time.hour = Mi(
             function (t) {
-                var n = t.getTimezoneOffset() / 60
-                return new qo(36e5 * (Math.floor(t / 36e5 - n) + n))
             },
-            function (t, n) {
-                t.setTime(t.getTime() + 36e5 * Math.floor(n))
-            },
-            function (t) {
-                return t.getHours()
-            }
         )),
         (Ci.time.hours = Ci.time.hour.range),
         (Ci.time.hours.utc = Ci.time.hour.utc.range),
         (Ci.time.day = Mi(
-            function (t) {
-                var n = new qo(1970, 0)
-                return n.setFullYear(t.getFullYear(), t.getMonth(), t.getDate()), n
-            },
             function (t, n) {
-                t.setDate(t.getDate() + n)
             },
-            function (t) {
-                return t.getDate() - 1
-            }
         )),
         (Ci.time.days = Ci.time.day.range),
         (Ci.time.days.utc = Ci.time.day.utc.range),
         (Ci.time.dayOfYear = function (t) {
-            var n = Ci.time.year(t)
-            return Math.floor((t - n - 6e4 * (t.getTimezoneOffset() - n.getTimezoneOffset())) / 864e5)
         }),
         Co.forEach(function (t, n) {
             ;(t = t.toLowerCase()), (n = 7 - n)
             var e = (Ci.time[t] = Mi(
                 function (t) {
-                    return (t = Ci.time.day(t)).setDate(t.getDate() - ((t.getDay() + n) % 7)), t
                 },
-                function (t, n) {
-                    t.setDate(t.getDate() + 7 * Math.floor(n))
-                },
-                function (t) {
-                    var e = Ci.time.year(t).getDay()
-                    return Math.floor((Ci.time.dayOfYear(t) + ((e + n) % 7)) / 7) - (e !== n)
-                }
             ))
             ;(Ci.time[t + 's'] = e.range),
                 (Ci.time[t + 's'].utc = e.utc.range),
                 (Ci.time[t + 'OfYear'] = function (t) {
-                    var e = Ci.time.year(t).getDay()
-                    return Math.floor((Ci.time.dayOfYear(t) + ((e + n) % 7)) / 7)
                 })
         }),
         (Ci.time.week = Ci.time.sunday),
@@ -7529,27 +6883,13 @@ d3 = (function () {
         (Ci.time.weekOfYear = Ci.time.sundayOfYear),
         (Ci.time.month = Mi(
             function (t) {
-                return (t = Ci.time.day(t)), t.setDate(1), t
             },
-            function (t, n) {
-                t.setMonth(t.getMonth() + n)
-            },
-            function (t) {
-                return t.getMonth()
-            }
         )),
         (Ci.time.months = Ci.time.month.range),
         (Ci.time.months.utc = Ci.time.month.utc.range),
         (Ci.time.year = Mi(
             function (t) {
-                return (t = Ci.time.day(t)), t.setMonth(0, 1), t
             },
-            function (t, n) {
-                t.setFullYear(t.getFullYear() + n)
-            },
-            function (t) {
-                return t.getFullYear()
-            }
         )),
         (Ci.time.years = Ci.time.year.range),
         (Ci.time.years.utc = Ci.time.year.utc.range)
@@ -7578,110 +6918,24 @@ d3 = (function () {
             [Ci.time.format('%Y'), o],
             [
                 Ci.time.format('%B'),
-                function (t) {
-                    return t.getMonth()
-                },
             ],
-            [
-                Ci.time.format('%b %d'),
-                function (t) {
-                    return 1 != t.getDate()
-                },
-            ],
-            [
-                Ci.time.format('%a %d'),
-                function (t) {
-                    return t.getDay() && 1 != t.getDate()
-                },
-            ],
-            [
-                Ci.time.format('%I %p'),
-                function (t) {
-                    return t.getHours()
-                },
-            ],
-            [
-                Ci.time.format('%I:%M'),
-                function (t) {
-                    return t.getMinutes()
-                },
-            ],
-            [
-                Ci.time.format(':%S'),
-                function (t) {
-                    return t.getSeconds()
-                },
-            ],
-            [
-                Ci.time.format('.%L'),
-                function (t) {
-                    return t.getMilliseconds()
-                },
-            ],
+
         ],
         nc = Ci.scale.linear(),
         ec = Si(tc)
     ;(Qo.year = function (t, n) {
-        return nc.domain(t.map(Ei)).ticks(n).map(ki)
     }),
         (Ci.time.scale = function () {
-            return xi(Ci.scale.linear(), Qo, ec)
         })
     var rc = Qo.map(function (t) {
             return [t[0].utc, t[1]]
         }),
         uc = [
             [Ci.time.format.utc('%Y'), o],
-            [
-                Ci.time.format.utc('%B'),
-                function (t) {
-                    return t.getUTCMonth()
-                },
-            ],
-            [
-                Ci.time.format.utc('%b %d'),
-                function (t) {
-                    return 1 != t.getUTCDate()
-                },
-            ],
-            [
-                Ci.time.format.utc('%a %d'),
-                function (t) {
-                    return t.getUTCDay() && 1 != t.getUTCDate()
-                },
-            ],
-            [
-                Ci.time.format.utc('%I %p'),
-                function (t) {
-                    return t.getUTCHours()
-                },
-            ],
-            [
-                Ci.time.format.utc('%I:%M'),
-                function (t) {
-                    return t.getUTCMinutes()
-                },
-            ],
-            [
-                Ci.time.format.utc(':%S'),
-                function (t) {
-                    return t.getUTCSeconds()
-                },
-            ],
-            [
-                Ci.time.format.utc('.%L'),
-                function (t) {
-                    return t.getUTCMilliseconds()
-                },
-            ],
         ],
         ic = Si(uc)
     return (
         (rc.year = function (t, n) {
-            return nc.domain(t.map(Ni)).ticks(n).map(Ai)
-        }),
-        (Ci.time.scale.utc = function () {
-            return xi(Ci.scale.linear(), rc, ic)
         }),
         Ci
     )

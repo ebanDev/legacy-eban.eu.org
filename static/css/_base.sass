@@ -1,0 +1,52 @@
+body
+  background: var(--main-bg-color)
+  color: var(--main-text-color)
+
+section
+  min-height: 100vh
+  width: 100vw
+  scroll-snap-align: start
+
+.centeredContent
+  width: 100vw
+  padding: 0px 15vw
+  margin-top: 50vh
+  transform: translateY(-50%)
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+
+h1
+  color: var(--title-text-color)
+  font-family: var(--title-fonts)
+  font-size: 55px
+  display: inline
+  @include onMobile
+    font-size: 8.5vw
+
+.purpleLine
+  background: var(--main-cta-color)
+  height: 3px
+  width: 70px
+  border-radius: 50px
+  margin-left: 5px
+  margin-top: 5px
+
+.purpleLine:nth-child(3)
+  margin-left: 20px
+  margin-top: 7px
+
+.centeredTitle
+  margin: 0 auto
+  padding: 6vh 0
+  width: max-content
+
+#background
+  position: fixed
+  z-index: -1
+  opacity: 50%
+  width: 100vw
+  @include onMobile
+    height: 100vh
+    width: initial !important

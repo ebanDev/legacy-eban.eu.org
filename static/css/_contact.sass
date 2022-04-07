@@ -1,0 +1,22 @@
+#contact
+  height: 100vh
+  .centeredContent
+    width: 50vw
+    margin-left: 25vw
+    transform: translateY(calc(-50% - 81px - 10vh))
+    @include onMobile
+      width: 80vw
+      margin-left: 10vw
+    .contactBubble
+      height: 50px
+      width: 50px
+      margin: 10px
+      transition: .2s
+      @include cardStyle
+      svg
+        margin: 50% 0% 0% 50%
+        transform: translate(-50%, -50%)
+      &:hover
+        background: var(--main-cta-color)
+        transform: scale(1.03)
+        box-shadow: var(--main-cta-high-contrast-color) 0px 4px 12px
