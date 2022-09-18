@@ -43,6 +43,7 @@ function handleIntersectionContact(entries) {
       document.querySelector("#navArrows svg:nth-child(2)").classList.remove('disabled')
     }
   });
+  updateClickables()
 }
 
 const contactSectionIntersection = new IntersectionObserver(handleIntersectionContact);

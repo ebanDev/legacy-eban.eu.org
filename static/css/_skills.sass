@@ -16,7 +16,6 @@
         margin-left: 50%
       .node
         circle
-          cursor: pointer
           fill: #161638
           stroke: var(--main-cta-high-contrast-color)
           stroke-width: 2.5px
@@ -26,12 +25,11 @@
           font-weight: 600
           @include onMobile
             font-size: 17px
-          &.clickable
-            cursor: pointer
         text.clickable, circle
           transition: .2s
           &:hover
             transform: scale(1.05)
+            fill: var(--main-cta-high-contrast-color)
       path.link
         fill: none
         stroke: var(--main-text-color)

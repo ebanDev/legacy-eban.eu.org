@@ -64,6 +64,32 @@ body {
   color: var(--main-text-color);
 }
 
+* {
+  cursor: none;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--main-cta-color);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  background: rgba(191, 175, 216, 0.5);
+  transition-property: width, height, border;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.cursor.onHover {
+  width: 0px !important;
+  height: 0px !important;
+  border: none !important;
+}
+
 picture {
   position: fixed;
   z-index: -10;
@@ -200,7 +226,6 @@ h1 {
   width: 30px;
   height: 30px;
   transition: 0.2s;
-  cursor: pointer;
   color: var(--main-cta-color);
 }
 #about .topIconsContainer svg:hover {
@@ -228,11 +253,11 @@ h1 {
 }
 #about #translationContainer a {
   display: block;
-  cursor: pointer;
   margin-top: 3px;
 }
 #about #translationContainer a:hover {
   color: var(--main-cta-high-contrast-color);
+  font-weight: bold;
 }
 #about .centeredContent {
   transform: translateY(calc(-50% - 55px - 60px));
@@ -291,7 +316,6 @@ h1 {
   margin-left: 50%;
 }
 #skills .graphContainer svg .node circle {
-  cursor: pointer;
   fill: #161638;
   stroke: var(--main-cta-high-contrast-color);
   stroke-width: 2.5px;
@@ -306,14 +330,12 @@ h1 {
     font-size: 17px;
   }
 }
-#skills .graphContainer svg .node text.clickable {
-  cursor: pointer;
-}
 #skills .graphContainer svg .node text.clickable, #skills .graphContainer svg .node circle {
   transition: 0.2s;
 }
 #skills .graphContainer svg .node text.clickable:hover, #skills .graphContainer svg .node circle:hover {
   transform: scale(1.05);
+  fill: var(--main-cta-high-contrast-color);
 }
 #skills .graphContainer svg path.link {
   fill: none;
@@ -461,7 +483,6 @@ h1 {
   }
 }
 #navArrows svg {
-  cursor: pointer;
   transition: 0.2s;
 }
 #navArrows svg:hover {
@@ -469,8 +490,7 @@ h1 {
   color: var(--main-cta-high-contrast-color);
 }
 #navArrows svg.disabled {
-  opacity: 50%;
-  cursor: default;
+  opacity: 20%;
 }
 #navArrows svg.disabled:hover {
   transform: scale(1);
