@@ -2,6 +2,14 @@ body
   background: var(--main-bg-color)
   color: var(--main-text-color)
 
+picture
+  position: fixed
+  z-index: -10
+  animation : moveAround 50s infinite
+  transition-timing-function: linear
+  transform: scale(2)
+  opacity: .5
+
 section
   min-height: 100vh
   width: 100vw
@@ -50,3 +58,20 @@ h1
   @include onMobile
     height: 100vh
     width: initial !important
+
+@keyframes moveAround
+  0%
+    left: 0%
+    top: 10%
+  25%
+    left: 80%
+    top: 10%
+  50%
+    left: 80%
+    top: 80%
+  75%
+    left: 10%
+    top: 80%
+  100%
+    left: 0%
+    top: 10%

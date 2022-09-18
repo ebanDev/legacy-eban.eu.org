@@ -22,59 +22,11 @@
 </head>
 
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="background">
-      <defs>
-          <filter id="blur" filterUnits="userSpaceOnUse">
-              <feGaussianBlur stdDeviation="6"/>
-          </filter>
-      </defs>
-
-      <g filter="url(#blur)" mask="url(#circle)">
-          <circle fill="var(--main-bg-color)">
-              <animateMotion begin="00s" dur="20s" repeatCount="indefinite" path="M 20 0 A 10 10 0 0 1 0 20 A 20 20 0 0 1 20 0 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="00s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-cta-color)">
-              <animateMotion begin="-20s" dur="20s" repeatCount="indefinite" path="M 40 20 A 10 10 0 0 1 20 0 A 20 20 0 0 1 40 20 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-20s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-bg-color)">
-              <animateMotion begin="-40s" dur="20s" repeatCount="indefinite" path="M 20 40 A 10 10 0 0 1 40 20 A 20 20 0 0 1 20 40 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-40s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-bg-color)">
-              <animateMotion begin="-60s" dur="20s" repeatCount="indefinite" path="M 0 20 A 10 10 0 0 1 20 40 A 20 20 0 0 1 0 20 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-60s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-cta-color)">
-              <animateMotion begin="00s" dur="20s" repeatCount="indefinite" path="M 20 0 A 10 10 0 0 1 0 20 A 20 20 0 0 1 20 0 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="00s" repeatCount="indefinite"/>
-              <animate attributeType="XML" attributeName="opacity" values="0;1;0;0;0" dur="20s" begin="00s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-bg-color)">
-              <animateMotion begin="-20s" dur="20s" repeatCount="indefinite" path="M 40 20 A 10 10 0 0 1 20 0 A 20 20 0 0 1 40 20 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-20s" repeatCount="indefinite"/>
-              <animate attributeType="XML" attributeName="opacity" values="0;1;0;0;0" dur="20s" begin="-20s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-cta-color)">
-              <animateMotion begin="-40s" dur="20s" repeatCount="indefinite" path="M 20 40 A 10 10 0 0 1 40 20 A 20 20 0 0 1 20 40 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-40s" repeatCount="indefinite"/>
-              <animate attributeType="XML" attributeName="opacity" values="0;1;0;0;0" dur="20s" begin="-40s" repeatCount="indefinite"/>
-          </circle>
-
-          <circle fill="var(--main-bg-color)">
-              <animateMotion begin="-60s" dur="20s" repeatCount="indefinite" path="M 0 20 A 10 10 0 0 1 20 40 A 20 20 0 0 1 0 20 Z"/>
-              <animate attributeType="XML" attributeName="r" values="8;16;8;32;8" dur="20s" begin="-60s" repeatCount="indefinite"/>
-              <animate attributeType="XML" attributeName="opacity" values="0;1;0;0;0" dur="20s" begin="-60s" repeatCount="indefinite"/>
-          </circle>
-      </g>
-  </svg>
+  <picture>
+    <source srcset="static/img/background.avif" type="image/avif">
+    <source srcset="static/img/background.webp" type="image/webp">
+    <img src="static/img/background.png" alt="">
+  </picture>
   <nav id="navArrows">
     <svg onclick="prevPage()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
       <polyline points="18 15 12 9 6 15"></polyline>
@@ -105,24 +57,21 @@
       <a onclick="updateLang('es')">🇪🇸 Español</a>
       <a onclick="updateLang('eo')">🟩 Esperanto</a>
       <a onclick="updateLang('fr')">🇫🇷 Français</a>
-      <a onclick="updateLang('ka')">🇬🇪 ქართული</a>
     </div>
 
     <div class="centeredContent">
       <div class="textContent">
         <h1>
           Eban Rami
-          <!--{ka} ებანი რამი-->
         </h1>
         <div class="purpleLine"></div>
         <div class="purpleLine"></div>
         <p>
-          I am an high school student fond of linguistics 🗣️, robotics 🤖, cybersecurity 👨‍💻, UI Design 🎨 and technology 🖥️ in general.
-          <!--{fr}Je suis un lycéen passionné de linguistique 🗣️, robotique 🤖, sécurité informatique 👨‍💻, UI Design 🎨 et de technologie 🖥️ en général.-->
-          <!--{eo}Mi estas studento ŝatanta lingvosciencon 🗣️, robotikon 🤖, komputilan sekurecon 👨‍💻, UI-Dezajnon 🎨 kaj teknologion 🖥️ ĝenerale.-->
-          <!--{fi}Minä olen lukiolainen kiinnostunut kielitiedoista 🗣️, robotiikkoista 🤖,  kyberturvallisuusoista 👨‍💻, design-käyttöliittymoista 🎨 ja 🖥️ informatiikkoista yleensäkään.-->
-          <!--{es}Soy un estudiante de bachillerato apasionado de lingüística 🗣️, robótica 🤖, ciberseguridad 👨‍💻, diseñadores de interfaces 🎨 y tecnología 🖥️ en general.-->
-          <!--{ka}მე ვარ სტუდენტი გატაცებული ენათმეცნიერებით 🗣️, რობოტებით 🤖, კომპიუტერული უსაფრთხოებით 👨‍💻, UI დიზაინით 🎨 და ტექნოლოგიით🖥️ სხვა .-->
+          I am an high school student fond of linguistics 🗣️, robotics 🤖, cybersecurity 👨‍💻, art 🎨 and technology 🖥️ in general.
+          <!--{fr}Je suis un lycéen passionné de linguistique 🗣️, de robotique 🤖, de sécurité informatique 👨‍💻, d'art 🎨 et de technologie 🖥️ en général.-->
+          <!--{eo}Mi estas studento ŝatanta lingvosciencon 🗣️, robotikon 🤖, komputilan sekurecon 👨‍💻, arto 🎨 kaj teknologion 🖥️ ĝenerale.-->
+          <!--{fi}Minä olen lukiolainen kiinnostunut kielitiedoista 🗣️, robotiikkoista 🤖,  kyberturvallisuusoista 👨‍💻, taidetta 🎨 ja 🖥️ informatiikkoista yleensäkään.-->
+          <!--{es}Soy un estudiante de bachillerato apasionado de lingüística 🗣️, robótica 🤖, ciberseguridad 👨‍💻, arte 🎨 y tecnología 🖥️ en general.-->
         </p>
       </div>
       <img src="/static/img/illustration.svg" alt="" id="illustration">
@@ -136,7 +85,6 @@
         <!--{eo}Miaj Lertecoj-->
         <!--{fi}Taitoni-->
         <!--{es}Mis Habilidades-->
-        <!--{ka}ჩემი უნარები-->
       </h1>
       <div class="purpleLine"></div>
       <div class="purpleLine"></div>
@@ -149,7 +97,6 @@
         <!--{eo}Nivelo :-->
         <!--{fi}Mestaritaso :-->
         <!--{es}Nivel de dominio :-->
-        <!--{ka}ოსტატობის დონე  :-->
       </b> 😕 😐 🙂 😄 🤩</p>
   </section>
   <section id="projects">
@@ -160,7 +107,6 @@
         <!--{eo}Miaj Projektoj-->
         <!--{fi}Hankkeeni-->
         <!--{es}Mis Proyectos-->
-        <!--{ka}ჩემი პროექტები-->
       </h1>
       <div class="purpleLine"></div>
       <div class="purpleLine"></div>
@@ -177,7 +123,6 @@
           <!--{eo}I Learned estas kunlabora blogo populariganta temojn rilatajn al reto, Linukso, cibersekureco kaj komputado ĝenerale.-->
           <!--{fi}I Learned on yhteisblogi popularisointi aiheet kytköksissä verkkoteen, Linuxteen, kyberturvallisuuteen ja informatiikkoista yleensäkään.-->
           <!--{es}I Learned es una colaborativa bitácora popularizando temas relacionados con redes, Linux, ciberseguridad y informática en general.-->
-          <!--{ka}I Learned არის საზიარო ბლოგი რომელიც გვეხმარება უკეთ წარმოვიდგითონ პოპულაციის დაკავშირების თემები როგორიცაა: კომპიუტერული ქსელი, ლინუქსი, კომპიუტერული უსაფრთხოებქ და ზოგადი ინფორმატიკა.-->
         </p>
         <a target="_blank" rel="noopener" href="https://ilearned.eu">
           🔗 View
@@ -185,7 +130,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
       <div class="card">
@@ -199,7 +143,6 @@
           <!--{eo}Mi partoprenis la projekton ShutUpTrackers, kiu estas retejo kiu provizas informojn por protekti la sekurecon kaj konfidencon de viaj datumoj.-->
           <!--{fi}Minä osallistuin vuonna ShutUpTrackers haneki joka se on verkkosivusto että tarjoaa tietoa suojella turvallissus ja luottamuksellisuus tiedoistasi.-->
           <!--{es}Yo participé en ShutUpTrackers proyecto quien es un sitio web que proporciona informaciónes para abrigar seguridad y confidencialidad de sus datos.-->
-          <!--{ka}მე მონაწილეობა მივეღე პროექტ ShutUpTrackers რომელიც არის ვებგვერდი, რომელიც გვაწვდის ინფორმაციას თქვენი მონაცემების უსაფრთხოებისა და კონფიდენციალურობის დასაცავად.-->
         </p>
         <a target="_blank" rel="noopener" href="https://shutuptrackers.com/">
           🔗 View
@@ -207,7 +150,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
       <div class="card">
@@ -219,7 +161,6 @@
             <!--{fi}Minun Verkkko-->
             <!--{eo}Mia reto-->
             <!--{es}Mia red-->
-            <!--{ka}ჩემი ქსელი-->
           </h3>
         </div>
         <p>
@@ -228,7 +169,6 @@
           <!--{eo}Mi administras reton de pluraj maŝinoj por lerni retan kaj sisteman administradon.-->
           <!--{fi}Minä hallitan verkko useista konet jotta oppia verkko ja järjestelmänhallinta.-->
           <!--{es}Yo administro una red de varias máquinas para aprender red y sistema administración.-->
-          <!--{ka}მე ვმართავ კომპიუტერული ქსელი სისტემის ადმინისტრირების შესასწავლად.-->
         </p>
         <a target="_blank" rel="noopener" href="https://netbox.eban.eu.org">
           🔗 View
@@ -236,7 +176,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
       <div class="card">
@@ -250,7 +189,6 @@
           <!--{eo}Systemd hardened estas git-deponejo de diversaj harditaj systemd-servoj uzantaj modernajn sabloboksado-funkciojn de systemd.-->
           <!--{fi}Systemd hardened on git arkisto erilaisistat karaistunut systemd-palvelut käyttämällä nykyaikainen hiekkalaatikot ominaisuudet systemdsta.-->
           <!--{es}Systemd hardened es un repositorio git de varios aguerrido systemd servicios utilizando modernas funciones de sandboxing de systemd.-->
-          <!--{ka}Systemd hardened არის git საცავი სხვადასხვა გამაგრებული systemd სერვისების გამოყენებით systemd-ის თანამედროვე sandboxing მახასიათებლები .-->
         </p>
         <a target="_blank" rel="noopener" href="https://gitlab.ilearned.eu/i-learned/Systemd-hardened/">
           🔗 View
@@ -258,7 +196,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
       <div class="card">
@@ -272,7 +209,6 @@
           <!--{eo}I Learned Analytics estas alternativa fasado por goaccess subtenanta plurajn retejojn.-->
           <!--{fi}I Learned Analytics on vaihtoehtoinen front-end goaccess-ksi avustaviin moni verkkosivusto.-->
           <!--{es}I Learned Analytics es un alternativo frontal para goaccess que admite página web múltiple.-->
-          <!--{ka}I Learned Analytics არის ალტერნატიული წინა ნაწილი goaccess-ისთვის, რომელიც მხარს უჭერს მრავალ ვებსაიტს.-->
         </p>
         <a target="_blank" rel="noopener" href="https://gitlab.ilearned.eu/i-learned/analytics/">
           🔗 View
@@ -280,7 +216,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
       <div class="card">
@@ -292,7 +227,6 @@
             <!--{eo}Mia Git-->
             <!--{fi}Minun Git-->
             <!--{es}Mi Git-->
-            <!--{ka}ჩემი Git-ი-->
           </h3>
         </div>
         <p>
@@ -301,7 +235,6 @@
           <!--{eo}Mi realigis aliajn projektojn, kiujn vi povas trovi ĉe mia Github.-->
           <!--{fi}Olen tehnyt toinen hankkeet että sinä löydät sen Githubistani.-->
           <!--{es}Yo he hecho otros proyectos que puedes encontrar en mi Github.-->
-          <!--{ka}მე გავაკეთე სხვა პროექტები, რომლებიც შეგიძლიათ იპოვოთ ჩემს Github-ზე.-->
         </p>
         <a target="_blank" rel="noopener" href="https://github.com/ebanDev/">
           🔗 View
@@ -309,7 +242,6 @@
           <!--{eo}🔗 Vidi ĝin-->
           <!--{fi}🔗 Kastoa-->
           <!--{es}🔗 Ver-->
-          <!--{ka}🔗 ნახეთ-->
         </a>
       </div>
     </div>
@@ -322,7 +254,6 @@
         <!--{eo}Kontaktu Min-->
         <!--{fi}Ota Minuun Yhteyttä-->
         <!--{es}Contactarse Conmigo-->
-        <!--{ka}ჩემი საკონტაქტო მონაცემები-->
       </h1>
       <div class="purpleLine"></div>
       <div class="purpleLine"></div>
