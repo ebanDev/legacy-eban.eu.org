@@ -7,7 +7,8 @@ stages:
 prod-deploy-job:
     stage: prod-deploy
     script:
-        - apt install --no-cache wget tar
+        - apt update
+        - apt install wget tar
         - wget https://github.com/tdewolff/minify/releases/download/v2.10.0/minify_linux_amd64.tar.gz
         - tar -xf minify_linux_amd64.tar.gz -C /tmp
         - mv /tmp/minify /bin
