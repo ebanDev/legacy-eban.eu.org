@@ -1,5 +1,5 @@
 default:
-    image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
+    image: hub.ilearned.eu/i-learned/ci-cd/blog-builder
 
 stages:
     - prod-deploy
