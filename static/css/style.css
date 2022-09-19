@@ -12,13 +12,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "BPGArial";
-  src: url("/static/fonts/BPGArial.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
   --main-bg-color: #141429;
   --title-text-color: #F2F1F4;
@@ -90,7 +83,7 @@ body {
   border: none !important;
 }
 
-picture {
+body > picture {
   position: fixed;
   z-index: -10;
   -webkit-animation: moveAround 50s infinite;
