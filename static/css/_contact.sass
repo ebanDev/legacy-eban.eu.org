@@ -8,15 +8,16 @@
       width: 80vw
       margin-left: 10vw
     .contactBubble
+      @include cardStyle
       height: 50px
       width: 50px
+      background: var(--main-cta-color) 
       margin: 10px
       transition: .2s
-      @include cardStyle
       svg
         margin: 50% 0% 0% 50%
         transform: translate(-50%, -50%)
       &:hover
-        background: var(--main-cta-color)
+        background: rgb(126, 185, 128, 1)
         transform: scale(1.03)
         box-shadow: var(--main-cta-high-contrast-color) 0px 4px 12px

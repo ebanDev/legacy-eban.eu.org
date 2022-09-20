@@ -1,5 +1,10 @@
 #about
   height: 100vh
+  h1
+    font-size: 70px
+  p
+    font-size: 17px
+    font-weight: 500
   .topIconsContainer
     display: flex
     justify-content: space-between
@@ -14,7 +19,7 @@
       transition: .2s
       color: var(--main-cta-color)
       &:hover
-        color: var(--main-cta-high-contrast-color)
+        color: rgb(126, 185, 128, 1)
         transform: scale(1.1)
   #translationContainer
     @include cardStyle
@@ -32,9 +37,10 @@
     a
       display: block
       margin-top: 3px
+      color: var(--main-cta-high-contrast-color)
+      font-weight: bold
       &:hover
-        color: var(--main-cta-high-contrast-color)
-        font-weight: bold
+        color: rgb(126, 185, 128, 1)
 
   .centeredContent
     transform: translateY(calc(-50% - 55px - 60px))

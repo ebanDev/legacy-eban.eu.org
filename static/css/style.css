@@ -52,6 +52,12 @@ body {
   overflow-y: scroll;
 }
 
+html {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--main-bg-color);
   color: var(--main-text-color);
@@ -64,18 +70,18 @@ body {
 .cursor {
   width: 50px;
   height: 50px;
-  border: 3px solid var(--main-cta-color);
+  border: 2px solid rgba(126, 185, 128, 0.5);
   border-radius: 50%;
   position: fixed;
   z-index: 100;
   pointer-events: none;
-  background: rgba(191, 175, 216, 0.5);
+  background: rgba(126, 185, 128, 0.3);
   transition-property: width, height, border;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .cursor.onHover {
   width: 0px !important;
@@ -205,6 +211,13 @@ h1 {
 #about {
   height: 100vh;
 }
+#about h1 {
+  font-size: 70px;
+}
+#about p {
+  font-size: 17px;
+  font-weight: 500;
+}
 #about .topIconsContainer {
   display: flex;
   justify-content: space-between;
@@ -222,7 +235,7 @@ h1 {
   color: var(--main-cta-color);
 }
 #about .topIconsContainer svg:hover {
-  color: var(--main-cta-high-contrast-color);
+  color: rgb(126, 185, 128);
   transform: scale(1.1);
 }
 #about #translationContainer {
@@ -247,10 +260,11 @@ h1 {
 #about #translationContainer a {
   display: block;
   margin-top: 3px;
-}
-#about #translationContainer a:hover {
   color: var(--main-cta-high-contrast-color);
   font-weight: bold;
+}
+#about #translationContainer a:hover {
+  color: rgb(126, 185, 128);
 }
 #about .centeredContent {
   transform: translateY(calc(-50% - 55px - 60px));
@@ -421,7 +435,7 @@ h1 {
 }
 #projects .cardContainer .card a:hover {
   transform: scale(1.05);
-  background: var(--main-cta-high-contrast-color);
+  background: rgb(126, 185, 128);
 }
 
 #contact {
@@ -439,20 +453,21 @@ h1 {
   }
 }
 #contact .centeredContent .contactBubble {
-  height: 50px;
-  width: 50px;
-  margin: 10px;
-  transition: 0.2s;
   background: var(--card-bg-color);
   box-shadow: var(--card-shadow);
   border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  background: var(--main-cta-color);
+  margin: 10px;
+  transition: 0.2s;
 }
 #contact .centeredContent .contactBubble svg {
   margin: 50% 0% 0% 50%;
   transform: translate(-50%, -50%);
 }
 #contact .centeredContent .contactBubble:hover {
-  background: var(--main-cta-color);
+  background: rgb(126, 185, 128);
   transform: scale(1.03);
   box-shadow: var(--main-cta-high-contrast-color) 0px 4px 12px;
 }
@@ -477,10 +492,11 @@ h1 {
 }
 #navArrows svg {
   transition: 0.2s;
+  color: var(--main-cta-high-contrast-color);
 }
 #navArrows svg:hover {
   transform: scale(1.1);
-  color: var(--main-cta-high-contrast-color);
+  color: rgb(126, 185, 128);
 }
 #navArrows svg.disabled {
   opacity: 20%;
